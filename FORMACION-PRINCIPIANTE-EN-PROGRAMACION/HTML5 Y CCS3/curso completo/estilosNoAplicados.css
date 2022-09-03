@@ -1,0 +1,106 @@
+.tituloPrincipal{
+    color: rgba(0, 0, 0, 0.3) /*rgba nos permite elegir un color y un 4 parámetro que determinará
+    la opacidad de dicho color*/
+}
+
+/*Pseudoelementos*/
+
+.tituloPrincipal:first-letter{ /*pseudoelemento first-letter(primer letra de cada título)*/
+    font-weight: bold;/*aplicamos negrita a las firstletter*/
+}
+
+p:first-line{ /*pseudoelemento first-line (primer línea de texto)*/
+    font-style: italic;/*aplicamos italic a la firstline*/
+}
+
+.tituloPrincipal:before{ /*pseudoelemento before*/
+    content: "[";
+}
+
+.tituloPrincipal::after{ /*pseudoelemento after*/
+    content: "]";
+}
+
+/*Selectores avanzados*/
+
+main > p{ /*Aplicará sobre las etiquetas p hijas del main*/
+    background: red;
+}
+
+img + p{ /*Aplicará sobre un párrafo que viene despúes de una imagen*/
+    background: yellow;
+}
+
+img ~ p{ /*Aplicará a todos los párrafos que vienen después de una imagen*/
+    background: green;
+}
+
+.principal p:not(#mision){ /*aplicára a todos los párrafos menos al id #mision*/
+    background: orange;
+}
+
+section > p + h2{ /*secuencia de aplicación: etiqueta section, etiquetas p hijas, etiqueta h2 hermana de etiqueta p*/
+    background: orange;
+}
+
+.imagenDiferenciales{
+    width: 60%; 
+    transition: 400ms; 
+    box-shadow: 10px 10px 30px 12px #000000, -10px -10px yellow, -15px 10px rgba(50, 50,50, 0.5);
+    /*podemos agregar varios sombreados con diferentes colores*/
+}
+
+.instagram{
+    width: 70px;
+    height: 50px;
+    display: inline;
+    position: relative;
+    left: 500px;
+    bottom: 80px;
+    transition: 0.5s all;
+    
+}
+
+.instagram:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+
+}
+
+
+.twitter{
+    width: 51px;
+    height: 50px;
+    display: inline;
+    position: relative;
+    left: 500px;
+    bottom: 80px;
+    transition: 0.5s all;
+
+}
+
+.twitter:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+
+}
+
+.youtube{
+    width: 59px;
+    height: 59px;
+    display: inline;
+    position: relative;
+    left: 508px;
+    bottom: 76px;
+    transition: 0.5s all;
+
+}
+
+.youtube:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+
+}

@@ -1,0 +1,35 @@
+<body>
+    <textarea id="cuerpo-mensaje" cols="40" rows="5"></textarea>
+    <p>Caracteres: <span id="numero-caracteres">0</span> caracteres.</p>
+    
+</body>
+<script>
+    //función contador.js
+    
+    function actualizarCaracteres() {
+        var mensaje = document.querySelector("#cuerpo-mensaje").value;
+        var caracteres = mensaje.length;
+
+        var contador = document.querySelector("#numero-caracteres");
+        contador.innerHTML = caracteres;
+    }
+
+    var actualizadorCaracteres = document.querySelector("#cuerpo-mensaje");
+    actualizadorCaracteres.addEventListener("input", actualizarCaracteres); 
+
+</script>
+
+<script>
+    //función anónima
+    /*
+    var actualizadorCaracteres = document.querySelector("#cuerpo-mensaje");
+    actualizadorCaracteres.addEventListener("input", function(){
+
+        var mensaje = document.querySelector("#cuerpo-mensaje").value;
+        var caracteres = mensaje.length;
+        var contador = document.querySelector("#numero-caracteres");
+        contador.innerHTML = caracteres;
+
+    }); 
+    */
+</script>

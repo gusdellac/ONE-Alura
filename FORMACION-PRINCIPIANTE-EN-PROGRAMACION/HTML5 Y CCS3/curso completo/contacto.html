@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head> <!--Etiquetea de información-->
+        <meta charset="UTF-8">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body> <!--Cuerpo- Etiqueta de contenido-->
+        <header> <!--Encabezado-->
+            <div class="caja">
+                <h1><a href="index.html"><img class="logofooter" src="doc/imagenes/logo.png" alt="Logo Barbería Alura"></a></h1><!--propiedad alt muestra un texto alernativo (informativo) en caso
+                de que la imagen no haya podido ser cargada en el navegador-->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main> <!--Principal-->
+            <form> <!--Usamos la etiqueta form para crear un formulario-->
+                <label for="nombreapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron" required> <!--Etiqueta input para crear un recuadro(input-box) para que el usuario
+                pueda ingresar información. Propiedad type=text (indicamos el tipo de dato que se ingresará), propiedad 
+                id = (la utilizamos para relacionar nuestro input con etiqueta label, con la propiedad for = () relacionamos
+                nuestro id a este label. Label sirve para crear un texto que indique que debe ingresar el usuario dentro del
+                recuadro y al usar la propiedad for relacionamos el texto del label al recuadro, es decir cuando
+                clickeamos en el texto del label nos lleva el cursor al recuadro)-->
+
+                <label for="correoelectronico">Correo electrónico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com"> <!--type = email esta modificación del type tiene que ver
+                en como se verá el sitio en un celular. Ver página mobile input types. Experiencia de usuario navegando desde un celular-->
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx"> <!--required se utiliza para determinar un campo de input obligatorio
+                para el usuario, es decir no puede enviar el formulario sin completar los  campos obligatorios. <placeholder es una guía que se 
+                le muestra al usuario para que sepa el formato de los datos que debe ingresar-->
+
+                <!--<textarea> Etiqueta de input-box modificable en tamaño por el usuario-->
+                <label for="mensaje">Mensaje</label> <!--relacionamos el label con el textarea mediante el for-->
+                <textarea cols="70" rows="10" id="mensaje" required placeholder="Escribe un mensaje"></textarea><!--<textarea> Dimensiones: Cols(columna) 70; Rows(filas) 10; id para identificar
+                nuestro textarea-->
+
+                <fieldset> 
+
+                    <legend>¿Como le gustaría que lo contactemos?</legend> <!--fieldset utiliza la etiqueta legend para indicar títulos-->
+
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+                    <!--input type = radio nos crea un check-box. Con name relacionamos los 3 inputs para que solo pueda 
+                    seleccionarse uno. Value nos indica el valor
+                    del input?. Id para relacionarlo con su label-->
+
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+                    
+
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                    <!--propiedad checked nos da el input check seleccionado por defecto-->
+                    
+                </fieldset> <!--Etiqueta fieldset se utiliza para indicar un conjunto de datos referidos al mismo tema, en este caso referidos a los datos necesarios
+                para poder contactar al usuario -->
+
+                <fieldset>
+
+                    <legend>¿En cuál horario prefiere ser atendido?</legend>
+                    <select> 
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select> <!--Etiqueta con la cual podemos desplegar un menú de opciones para seleccionar. Dentro de ella (items)
+                    utilizamos la etiqueta option con un texto dentro de ella para determinar las opciones a seleccionar--> 
+
+                </fieldset>
+               
+
+                <label class="checkbox"><input type="checkbox" checked>Le gustaría recibir novedades de la Barbería Alura?</label> <!--Creamos un checkbox cuadrado. Notar
+                que ingresamos la etiqueta input dentro de la etiqueta label, por lo que no creamos un id para relacionarlo-->
+                
+                <input type="submit" value="Enviar formulario" class="enviar"> <!--input mas la propiedad type= submit
+                Nos crea un recuadro con un texto de enviar, haciendo referencia a enviar el formulario. 
+                Con la propiedad value = (indicamos el texto que tendra este recuadro)-->
+            </form>
+
+            <!--Etiqueta para crear tablas. Estructura lineas y columnas-->
+
+            <div class="table">
+                <table> 
+                    <!--Estructura de tabla: thead, tbody, tfooter-->
+                    <thead> 
+                        <tr> 
+                            <th>Día</th> <!--Columnas de nuestra tabla-->
+                            <th>Horario</th>
+                        </tr> <!--Filas de nuestra tabla-->
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>Lunes</td>
+                            <td>08 h - 20 h</td>
+        
+                        </tr>
+                        <tr>
+                            <td>Miercoles</td>
+                            <td>08 h - 20 h</td>
+        
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                            <td>08 h - 20 h</td>
+                        </tr>
+                    </tbody>
+                
+                </table> 
+
+            </div>
+            
+        </main>
+
+        <footer class="caja-footer"> <!--Pie de página-->
+            <img  class="logofooter" src="doc/imagenes/logo-blanco.png" alt="Logo Barbería Alura">
+            <p class="copyright">&copy Copyright Barbería Alura - 2022</p>
+
+            <a class="instagram" href="https://www.instagram.com/gustavodellac/"><img class="logo-instagram" src="doc/imagenes/instagram.png"></a>
+            <a class="twitter" href="https://twitter.com/gus_dellac"><img class="logo-twitter" src="doc/imagenes/twitter.png"></a>
+            <a class="youtube" href="https://www.youtube.com/channel/UCjOeYsUPbRH5HxpxW7pTJvA"><img class="logo-youtube" src="doc/imagenes/youtube.png"></a>
+        </footer>
+    </body>
+
+</html>

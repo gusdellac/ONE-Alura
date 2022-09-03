@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas> <!--Definimos una etiqueta canvas y le damos las dimensiones
+en donde colocaremos nuestro gráfico generado en js (ver las dimensiones en css)-->
+
+<html>
+    <script>
+
+        /*usamos let para definir una variable que sólo será utilizada en un bloque de código*/
+        let pantalla = document.querySelector("canvas"); /*variable pantalla le asignamos la etiqueta canvas de html
+        utilizando la función document.querySelector() entre los paréntesis indicamos el nombre de la etiqueta que deseamos utilizar.*/
+        let pincel = pantalla.getContext("2d"); /*el dibujo será en 2 dimensiones*/
+
+
+        /*Para dibujar rectángulos*/
+        pincel.fillStyle = "lightgrey"; //.fillStyle es una propiedad. Mediante esta propiedad elegimos el color de nuestra figura. Se coloca entre "" .
+        pincel.fillRect(0,0,600,400); /*fillRect() función para llenar nuestra área de dibujo.
+        Los dos primeros parámetros nos indican la posición en la que comenzará a dibujar nuestro pincel; los dos siguientes
+        determinan las medidas en las que se realizará el dibujo*/
+
+        /*Dibujamos otro rectángulo*/
+        pincel.fillStyle = "green";
+        pincel.fillRect(0,0,200,400);
+
+        /*Dibujamos otro rectángulo*/
+        pincel.fillStyle = "red";
+        pincel.fillRect(400,0,200,400);
+
+
+        /*Para dibujar triángulos*/
+        pincel.fillStyle = "yellow";
+        pincel.beginPath(); //función .beginPath() inicia un camino nuevo para comenzar a dibujar
+        pincel.moveTo(300,200); //función moveTo() mueve el pincel a un punto dentro de nuestro canvas (x,y) desde 
+        //donde se comenzará a dibujar
+        pincel.lineTo(200,400); //función lineTo() nos dibujará una línea en las coordenadas indicadas (x,y)
+        pincel.lineTo(400,400); 
+        pincel.fill();// función fill() rellena el dibujo con el color definido anteriormente (yellow)
+
+        /*Para dibujar circunferencias*/
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(300,200,50,0,2*3.14); //función arc() nos permite graficar circunferencias. (posición,posición,tamaño radio,ángulo inicial,ángulo final)
+        pincel.fill();
+
+
+
+    </script>
+</html>

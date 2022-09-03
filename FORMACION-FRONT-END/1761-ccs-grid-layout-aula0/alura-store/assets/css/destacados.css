@@ -1,0 +1,88 @@
+.destaques{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; /*width de las columnas*/
+    grid-template-rows: 33.33% 33.33% 33.33%; /*height de las líneas*/
+    height: calc(100vh - 50px); /*100vh (calculo del 100% de la pantalla) - 50px(el calculo comenzará
+    a partir de los 50px que corresponden al encabezado). Tener en cuenta que el signo menos(-) va separado de la segunda medida*/
+    gap: .2rem; /*espaciamiento entre las imagenes*/
+}
+
+
+.destaques__principal{ /*clases escritas utilizando el estandar BEM*/
+    background: url("../img/fortnite.jpg") center / cover no-repeat; /*forma resumida de configurar el background*/
+    /*background-size: cover; /*la imagen cubre todo el espacio del elemento*/
+    /*background-position: center;*/ /*imagen centrada*/
+    /*background-repeat: no-repeat; /*imagen no se repite*/
+    grid-column: 1 / 4; /*forma abreviada*/
+    /*grid-column-start: 1; /*la imagen abarca desde la columna 1 */
+    /*grid-column-end: 4; /*hasta la 4 (1,2,3)*/
+    grid-row: 1 / 3; /*forma abreviada*/
+    /*grid-row-start: 1; /*La imagen abarca desde la fila 1*/
+    /*grid-row-end: 3; /*hasta la 3 (1,2)*/
+    
+} 
+
+.destaques__secundario:nth-child(2){ /*:nth-child(2) esta configuración css se aplicará sólo 
+    al child 2 de la section. Debemos especificar esto porque los elementos siguientes contienen
+    el mismo nombre de clase, y por lo tanto esta configuración se aplicaría a todos*/
+    background: url("../img/pubg.jpg") center / cover no-repeat;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.destaques__secundario:nth-child(3){
+    background: url("../img/slack.png") center / cover no-repeat;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+.destaques__secundario:nth-child(4){
+    background: url("../img/whatsapp.png") center / cover no-repeat;
+    grid-column: 4 / 5;
+    grid-row:  3 / 4;
+}
+
+.destaques__secundario:nth-child(5) {
+    background: url("../img/cs-go.jpg") center / cover no-repeat;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.destaques__categorias{
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.destaques__categorias___lista{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.destaques__categorias___item{
+    align-items: center;
+    background-color: #fdfdfd;
+    display: flex;
+    color: #333333;
+    width: 50%;
+    padding: 1rem;
+}
+
+.destaques__categorias___link{
+    color: inherit;
+}
+
+.destaques__titulo{
+    color: #fdfdfd;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: .6rem;
+}
+
+.box {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}

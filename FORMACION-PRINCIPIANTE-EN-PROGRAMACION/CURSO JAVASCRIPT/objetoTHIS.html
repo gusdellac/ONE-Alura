@@ -1,0 +1,37 @@
+<ul class="lista">
+    <li>Haz clic en A</li>
+    <li>Haz clic en B</li>
+    <li>Haz clic en C</li>
+</ul>
+
+<input id="campo"><button id="boton">Adicionar</button>
+
+<script>
+
+    var lista = document.querySelectorAll('li');
+
+    for(var i = 0; i < lista.length; i++) {
+
+        lista[i].addEventListener('click', function() {
+            alert(this.textContent);
+        });
+    }
+
+    var boton = document.querySelector('#boton');
+    var input = document.querySelector('#campo');
+    var lista = document.querySelector('.lista');
+
+    boton.addEventListener('click',function() {
+        var li = document.createElement('li');
+        li.textContent = input.value;
+        lista.appendChild(li);
+    });
+
+
+    /*¡Alternativa correcta! Todo evento disparado en JavaScript posee un contexto que es accesible a través de la función ejecutada 
+    cuando el evento es disparado. En la función, podemos acceder al contexto a través del objeto implícito this. 
+    Es una referencia para el elemento DOM que está recibiendo el evento. Su naturaleza es dinámica, si clicamos en el primer elemento de 
+    la lista el this será el primer elemento, se clicamos en el segundo, el this será el segundo, y así sucesivamente.*/
+
+</script>
+

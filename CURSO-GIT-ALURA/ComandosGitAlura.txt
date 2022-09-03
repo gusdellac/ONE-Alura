@@ -1,0 +1,82 @@
+mkdir
+git init  
+git config --local user.name "name" : configura el nombre de usuario que administra el repositorio (localmente, solo para este repositorio)
+git config --local user.email "email" : configura el email de usuario que administra el repositorio (localmente, solo para este repositorio)
+git config --global user.name "name" : configura el nombre de usuario que administra el repositorio (global, para todos los repositorios iniciados a partir de esta configuración)
+git config --global user.email "email" : configura el email de usuario que administra el repositorio (global, para todos los repositorios iniciados a partir de esta configuración)
+git log --help : ayuda sobre git log
+git log -p : nos muestra el historial de commits con información detallada del código modificado
+git log --all -p
+git add <archivo>
+git commit -m
+git branch
+git checkout -b
+git restore
+git restore --staged
+git revert : revierte un commit creando otro commit
+git stash
+git stash pop : aplica el stash al último realizado y lo elimina
+git stash list : lista de modificaciones en estado de stash
+git stash apply <número de la lista de stash> : aplica el stash a un stash determinado
+git stash drop <número de la lista de stash> : elimina de la lista un stash determinado
+git diff
+
+Repositorios remotos:
+
+git init --bare : inicializa un repositorio remoto. Este repositorio no tendrá la working tree o área de trabajo.
+Sólo servirá como servidor, es decir, para sincronizar el trabajo de los miembros del equipo.
+
+git remote add nombre-repositorio camino/del/repositorio : para poder utilizar este servidor o repositorio remoto, debemos
+sincronizarlo con nuestro reposotorio local. Para ello, utilizamos este comando.  git remote add + nombre del repositorio (el nombre lo creamos en nuestro repositorio local) + ruta del directorio en el que se encuentra (este dato nos lo da el servidor cuando lo inicializamos
+ej:  C:/Users/gusta/practicaGit/servidorLocal/)
+
+git remote -v : nos muestra los servidores remotos activos para fetch y push
+
+git clone <ruta directorio del repositorio remoto> : clona el repositorio remoto en un repositorio local, si el repositorio remoto aún no recibió datos desde otro usuario (repositorio local)
+al ejecutar el git clone solo se realizará la conexión, pero git nos informará que estamos clonando un repositorio vacío (ej:  git clone /c/Users/gusta/practicaGit/servidorLocal/ proyecto). Notar la forma en la que se escribe la ruta al usar git clone.
+También si luego de la ruta dejamos un espacio podemos crear una carpeta, como se refleja en el ejemplo (carpeta proyecto).
+
+git push <nombre servidor> <rama utilizada (ej : Main)> : enviamos los datos de nuestro repositorio al servidor. (Ej : git push servidorProyecto1 Main )
+
+git remote rename <nombre actual repositorio> <nuevo nombre repositorio> : por defecto git, le da el nombre de origin a los repositorios remotos. Es necesario cambiar este nombre
+para que a efectos prácticos sea mas sencillo interpretar a que repositorio remoto le estamos enviando o recibiendo información.
+(Ej: git remote rename origin servidorProyecto1)
+
+git pull <nombre servidor> <rama utilizada (ej: Main)> : traemos los datos del repositorio remoto a nuestro repositorio local.
+(Ej :  git pull servidorProyecto1 Main)
+
+FUSION RAMAS
+
+git merge <nombre rama para aplicar merge> : fusionamos las ramas y confirmamos con un commit. Podemos ver como se unen las ramas auxiliares a la main. 
+La resolución del conflicto de ramas se confirma con un commit.
+
+git rebase <nombre rama para aplicar el rebase> : se realiza una fusión de ramas, pero a diferencia del merge, este aplica los commits sobre la rama en la que
+estamos posicionados al momento de realizar el rebase. Visualmente se verá el ultimo commit de la main , como el ultimo commit realizado y con el head. Los commits de la rama auxiliar
+se colocarán debajo del ultimo commit de la main.
+La resolución del conflicto de ramas se confirma sólo con git add.
+
+GITHUB
+
+Creamos el repositorio remoto en github, y copiamos el comando para agregarlo a nuestro repositorio local.
+git remote add <nombre servidor o repositorio> <ruta repositorio> : El nombre del repositorio remoto de github es por convención origin, debemos utilizar este nombre(Ej: git remote add origin https://github.com/blablabla)
+git push -u origin Main : este comando significa que cada vez que hagamos un git push de nuestra rama Main va a ir a origin. Se recomienda no utilizarlo.
+git push origin Main : realizamos a conciencia el envío de los datos al repositorio remoto.
+
+MOVERSE ENTRE COMMITS
+git checkout n°hash 
+Nota: al movernos a un commits anterior, si queremos comenzar a commitear desde esta versión del código debemos crear una nueva rama.
+Por que al volver a la rama Main , todo los commits generados que no fueron realizados dentro de una rama desaparecen y no podemos acceder a ellos.
+git checkout --help
+
+VERSIONES 
+
+git tag -a v0.1.0
+Que es posible ver qué cambios se hicieron en cada archivo, con el comando git diff;
+Que, al escribir sólo git diff, vemos los cambios en nuestros archivos que no se agregaron para commit (con git add);
+Que es posible comparar cambios entre dos ramas con git diff <branch1> .. <branch2>
+Que es posible comparar los cambios realizados entre un commit y otro, usando el comando git diff <commit1> .. <commit2>;
+Que Git nos permite guardar “marcos” de nuestra aplicación, por ejemplo, generando versiones, a través de git tag;
+Que el comando git tag -a se usa para generar una nueva tag;
+Las Releases de GitHub, que son generadas para cada tag de Git que creamos en nuestro repositorio.
+
+

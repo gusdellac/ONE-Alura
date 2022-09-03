@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULAR TABLA MULTIPLICACIÓN</h1>
+     
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+       
+    }
+
+    function imprimir(frase) {
+        document.write(frase); 
+        saltarLinea();
+    }
+
+    //Multiplicación con while (ciclo mientras)
+
+    imprimir("WHILE");
+
+    var i = 1; // la variable i se inicializa fuera del ciclo y previo a este
+
+    while (i <= 10) {
+
+        imprimir(5*i);
+
+        i = i + 1;
+
+    }
+
+    //Multiplicación con for (ciclo para)
+
+    imprimir("FOR");
+
+    for (var i = 1; i <= 10; i = i + 1) { //La variable i se declara en los parentesis del for en primer lugar, despues ";" y sigue
+    //la condición para finalizar las iteraciones, despues ";" y sigue el paso o incremento con el que se realizaran los ciclos.
+
+        imprimir(5*i);
+
+    }
+
+    //otra forma de realizar los incrementos de 1
+
+    imprimir("WHILE");
+
+    var i = 1;
+
+    while (i <= 10) {
+
+        imprimir(6*i);
+
+        i++;
+    }
+
+    imprimir("FOR");
+
+    for (var i = 1; i <= 10; i++) {
+
+        imprimir(7*i);
+
+    }
+
+</script>

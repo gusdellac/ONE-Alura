@@ -1,0 +1,468 @@
+body{
+    font-family: 'Montserrat', sans-serif; /*Aplicamos la fuente importada a todo nuestro body*/
+    
+}
+
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0;
+    box-shadow: inset 0 0 7px rgb(128, 4, 99); /*Sombreado interno: 
+    propiedad inset,parámetros: 0 0 (punto de referencia centro del bloque), 
+    30 px(intensidad del sombreado), color*/
+}
+
+
+
+.logoHeader{
+    text-align: inherit;
+    transition: 1.5s all;
+}
+
+.logoHeader:hover{
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    
+}
+
+.caja{
+    width: 1280px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 1s all;
+    
+}
+
+nav a:hover{
+    color: rgb(128, 4, 99);
+    text-decoration: overline;
+    
+}
+
+.productos{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    
+}
+
+.productos li:hover{
+    border-color: rgb(128, 4, 99); 
+    
+    
+}
+
+.productos li:active{
+    border-color: rgb(186, 139, 51);
+    
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.productoDescripcion{
+    font-size: 18px;
+}
+
+.productoPrecio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(doc/imagenes/bg.jpg);
+    /*padding: 15px;*/
+    box-shadow: inset 0 0 7px rgb(128, 4, 99);
+}
+
+.logofooter{
+    text-align: inherit;
+}
+.logofooter:hover{
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: 1.5s all;
+}
+
+.copyright {
+    color: white;
+    font-size: 13px;
+    font-style: italic;
+    margin: 10px;
+}
+
+form{ /*Referenciamos toda la etiqueta form*/
+    margin: 40px 0; /*le damos un margen de 40 px top-bottom, y 0 para right-left*/
+    width: auto;
+    text-align: center;
+}
+
+/*Los elementos de un formulario traen por defecto display : inline
+    Es decir ocupan del ancho de la págino solo la lingitud que ocupa su contenido. Otros elementos traen por defecto
+    display : block que quiere decir que ocupan el 100% de la página*/
+form label, form legend{ /*referenciamos solo la etiqueta label dentro del form. Aplicamos el mismo estilo a la etiqueta legend dentro del form*/
+    display: block; /*Usamos display: block para los elementos del formulario, es decir que ocupen todo el ancho
+    de la pantalla*/
+    font-size: 20px; /*Tamaño de la letra*/
+    margin: 0 0 10px; /*Margen de 0 top, 0 right, 10px para bottom*/
+}
+
+.input-padron, form textarea{ /*Referenciamos etiqueta input dentro del form, tambien referenciamos textarea en la misma linea
+    despues dejamos de aplicar estas propiedades al form input, form textarea y las aplicamos a la clase creada .input-padron*/
+    display: inline; /*Usamos display: block para los elementos del formulario*/
+    margin: 0 0 20px; /*Margen de 0 top, 0 right, 20px para bottom*/
+    padding: 10px 25px; /*Padding es el espaciamiento interno de nuestro elemento. Le asignamos
+    10px top-bottom, 25 px rigth-left. Esto aumenta el tamaño de nuestro input-box (espaciado entre el contenido y el 
+    borde)*/
+    width: 50%; /*Con width definimos el ancho de nuestro input, ocupará el 50% de los 940px con los que definimos
+    a nuestro main*/
+}
+
+.checkbox{
+    margin: 20px 0; /*aplicamos un margen en nuestro checkbox cuadrado 20px para top-bottom y 0 para right-left*/
+}
+
+/*Jerarquía en CSS: HTML(Aplicando styles directmanete en html); ID (llamando al id); CLASS(llamando a la clase); etiqueta (llamando a la etiqueta)
+Tener en cuenta que se puede por ejemplo llamar a una etiqueta y una clase, en este caso tiene mayor jerarquía que si llamaramos solo a la clase*/
+
+.enviar{
+    width: 40%;
+    padding: 15px 0; /*15px top-bottom; 0 right-left*/
+    font-size: 18px; /*tamaño fuente*/
+    font-weight: bold; /*Negrita*/
+    color: white; /*color letra*/
+    background: rgb(58, 56, 56); /*color de fondo*/
+    border: none; /*sin borde*/
+    border-radius: 10px; /*borde redondeado*/
+    transition: 1s all; /*se crea una transición de gris a violeta en el lapso de 2 seg; all para que aplique el cambio de transición
+    para todas las propiedades; background lo habiamos utilizado solo para la transicion de color*/
+    cursor: pointer; /*cambiamos la forma del cursor para que sea más intuitivo*/
+}
+
+.enviar:hover{ /* selector de clase .enviar más propiedad hover para detectar el evento de pasar el cursor por encima del elemento
+    tener en cuenta que esta propiedad (hover) debe utilizarse creando otro selector de clase y no en el mismo selector donde aplicamos otras
+    propiedades para nuestro elemento*/
+    background: rgb(128, 4, 99); /*al pasar el cursor por arriba del elemento cambiará el color a violeta*/
+    transform: scale(0.95); /*rotate(360deg); (parámetro de escala) aumenta el tamaño del elemento en un 5% al posicionarse en el; rotate
+    para rotar el elemento*/
+   
+}
+
+.table{
+    text-align: -webkit-center;
+}
+
+table{
+    margin: 40px 40px; /*margenes de nuestra tabla*/
+}
+
+thead{ /*referenciamos etiqueta thead*/
+    background: #555555; /*aplicamos un fondo color plomo*/
+    color: white; /*color de las letras*/
+    font-weight: bold; /*tipo letra negrita*/
+}
+
+td, th{ /*referenciamos las columnas del tbody y thead*/
+    border: 1px solid #000000; /*borde de 1px solido color negro*/
+    padding: 8px 15px;
+}
+
+
+/*CSS para nuestra home*/
+
+.banner{
+    width: 100%; /*ancho*/
+}
+
+
+
+
+
+.principal{ /*selector clase principal*/
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 1280px; /*le asignamos un ancho de pantalla de 940px (pantalla padrón de 1270px) práctica común*/
+    margin: 0 auto; /*0 para top y bottom Auto para right y left*/
+    
+}
+
+.tituloPrincipal{
+    text-align: center; /*alineamiento del texto (al centro)*/
+    font-size: 2em; /*tamaño de fuente 2em. Dos veces em (em es el tamaño por defecto que tiene la fuente del navegador)*/
+    margin: 0 0 1em;
+    clear: left; /*las configuraciones aplicarán solo a estas clases? ver. La imagen que usamos solo aplica para estos bloques*/
+    transition: 0.5s;
+    
+}
+
+.tituloPrincipal:hover{
+    color: rgb(128, 4, 99);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    text-shadow: 2px 2px 5px rgb(128, 4, 99); /*sombreado a texto: 2px eje vertical,2px eje horizontal,
+    5 px difuminación, color*/
+}
+
+.principal p { /*referenciamos clase principal y etiqueta p*/
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px; /*ancho*/
+
+    float: left; /*usamos float para colocar la imagen con el texto relacionado a ella en su lateral, en este caso
+    a su izquierda */
+    margin: 0 30px 20px 0; /*0 top 20 right 20 bottom 20 left*/
+    
+}
+
+.mapa{ /*selector de clase mapa*/
+    padding: 3em 0; /*top-bottom: 3 veces el tamaño de fuente por defecto del navegador, 0 right-left*/
+    background: linear-gradient(#FEFEFE,#888888); /*funcion linear-gradient nos genera un degradado
+    entre los colores elegidos como parámetros. Se puede definir el angulo en que se aplicará el degradado. Por ejemplo
+    45deg (45 grados), el parámetro debe colocarse al inicio*/
+    
+}
+
+.mapa p{ /*Selector clase mapa y etiqueta p donde tenemos nuestro título*/
+    margin: 0 0 2em; /*0 top 0 right 2 em bottom*/
+    text-align: center; /*texto al centro*/
+}
+
+.mapaContenido{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 10px 0;
+    background: #888888;
+    
+}
+
+.contenidoDiferenciales{ /*selector clase contenidoDiferenciales*/
+    width: 960px; /*ancho de 640px para todo el bloque de código seleccionado con esta clase(<div class>)*/
+    margin: 0 auto; /*margen 0 top-bottom; auto right-left*/
+
+}
+
+.listaDiferenciales{
+    width: 40%; /*ocupará un ancho del 40 % de los 640px que definimos en la clase de .contenidoDiferenciales*/
+    display: inline-block; /*ajustamos display a que ocupe solo el espacio de su contenido*/
+    vertical-align: top; /*alineamos el texto a top*/
+
+}
+
+.items{
+    line-height: 1.5; /*altura de la línea. 1.5 más que el tamaño por defecto o padron de la fuente del navegador*/
+}
+
+.items:before{
+    content: "★";
+}
+
+.items:first-child{ /*utilizamos una pseudoclase para el selector .items: first-child. Estamos referenciando el primer elemento, el primer 
+    hijo, de nuestro conjunto de elementos referenciados con la clase items. Tambien podemos usar nth-child(3) seleccionamos con un número entero en que posición de la lista se encuentra el elemento que queremos*/
+    font-weight: bold;
+}
+
+.imagenDiferenciales{
+    width: 60%; /*ocupará un ancho del 60 % de los 640px que definimos en la clase de .contenidoDiferenciales*/
+    transition: 400ms; /*trasición de 400milisegundos*/
+    box-shadow: 10px 10px 30px 12px #000000; /*Sombreado externo: 10 px eje vertical derecho(-10 vertical izquierdo),
+    10 px eje horizontal(-10 arriba), 30 px difuminación, 12 px expansión del sombreado*/
+}
+
+.imagenDiferenciales:hover{
+    opacity: 0.9; /*elegimos una opacidad del 30%*/
+    
+}
+
+.video{ /*selector clase video*/
+    width: 1280px;
+    margin: 1em auto; /*ajustamos margenes*/
+
+}
+
+.instagram{
+    position: relative;
+    left: 500px;
+    bottom: 80px;
+}
+
+.logo-instagram{
+    width: 70px;
+    height: 50px;
+    display: inline;
+    transition: 0.5s all;
+}
+
+.logo-instagram:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+.twitter{
+    position: relative;
+    left: 500px;
+    bottom: 80px;
+    
+}
+
+.logo-twitter{
+    width: 51px;
+    height: 50px;
+    display: inline;
+    transition: 0.5s all;
+}
+
+.logo-twitter:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.youtube{
+    position: relative;
+    left: 508px;
+    bottom: 76px;
+    
+}
+
+.logo-youtube{
+    width: 59px;
+    height: 59px;
+    display: inline;
+    transition: 0.5s all;
+}
+
+.logo-youtube:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*media query es un módulo de css que nos permite adaptar la representación del contenido a características del dispositivo como la resolución de pantalla o la presencia de características de accesibilidad como el braille.*/
+
+/*Diseño responsivo*/
+
+@media screen and (max-width:480px){  /*aplicar a pantallas con un máximo de 480px*/
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video{
+        width: auto;
+    }
+
+    .listaDiferenciales, .imagenDiferenciales{
+        width: 100%;
+    }
+
+    .instagram {
+        position: relative;
+        left: 5px;
+        bottom: 10px;   
+    }
+
+    .twitter {
+        position: relative;
+        left: 1px;
+        bottom: 10px;
+    }
+
+    .youtube {
+        position: relative;
+        left: 5px;
+        bottom: 7px;
+    }
+
+}
+
+@media screen and (max-width:1200px){  /*aplicar a pantallas con un máximo de 1200px*/
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapaContenido, .contenidoDiferenciales, .video{
+        width: auto;
+    }
+
+    .listaDiferenciales, .imagenDiferenciales{
+        width: 100%;
+    }
+
+    .instagram {
+        position: relative;
+        left: 5px;
+        bottom: 10px;   
+    }
+
+    .twitter {
+        position: relative;
+        left: 1px;
+        bottom: 10px;
+    }
+
+    .youtube {
+        position: relative;
+        left: 5px;
+        bottom: 7px;
+    }
+
+}
+
+
+
+

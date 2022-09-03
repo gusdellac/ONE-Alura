@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>USANDO VARIABLES</h1>
+
+<script>
+
+    var anho = 2030; //Declaramos variable anho y la definimos con int
+
+    document.write("Juan tiene: " + (anho - 2000) + " años."); //utilizamos la variable anho
+    //y la hacemos operar con valores int y la concatenamos a strings
+    document.write("<br>");
+    document.write("Pedro tiene: " + (anho - 1995) + " años.");
+    document.write("<br>");
+
+    anho= 2035; //redefinimos variable anho con otro valor, no es necesario volver a declararla
+    document.write("Carlos tiene: " + (anho - 2005) + " años.");
+    document.write("<br>");
+
+    var edadJimena = 10;
+    var edadPaola = 25;
+    var edadLaura = 15;
+
+    var nombre1 = "Jimena";
+    var nombre2 = "Paola";
+    var nombre3 = "Laura";
+
+    var promedioEdades = (edadJimena + edadLaura + edadPaola)/3; //operaciones matemáticas con variables
+
+    document.write("El promedio de las edades de " + nombre1 + ", " + nombre2 + " y " + nombre3 + " es: " + Math.round(promedioEdades)); //concatenando con signo + 
+    document.write("<br>");
+
+    document.write("El promedio de las edades de " , nombre1 , ", " , nombre2 , " y " , nombre3 , " es: " , Math.round(promedioEdades)); //concatenando con comas
+    document.write("<br>");
+
+
+    var promedio = (20+35+27)/3; //Definimos la variable con una fórmula o operación matemática
+
+    document.write("El promedio es: " + Math.round(promedio)); //utilizamos la función Math.round
+    //para redondear al entero mas cercano el valor resultante guardado en variable promedio.
+
+
+</script>

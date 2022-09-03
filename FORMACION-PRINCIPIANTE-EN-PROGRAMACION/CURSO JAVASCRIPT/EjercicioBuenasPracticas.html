@@ -1,0 +1,25 @@
+<button class="boton">Calcular</button>
+<input class="numero1">
+<input class="numero2">
+<span class="resultado"></span>
+
+<script>
+
+    var boton = buscarElemento('.boton');
+    var numero1 = buscarElemento('.numero1');
+    var numero2 = buscarElemento('.numero2');
+    var resultado = buscarElemento('.resultado');
+
+    boton.addEventListener('click', function() {
+    resultado.textContent = multiplicar(numero1.value,numero2.value);
+    });
+
+    function buscarElemento(selector){ //funcion que aclara la acción que realiza el document.querySelector()
+          return document.querySelector(selector);
+    }
+
+    function multiplicar(numero1,numero2){ //funcion que realiza la multiplicación y puede ser reutilizada en otras partes del código o del proyecto
+        return numero1 * numero2;
+    }
+
+</script>

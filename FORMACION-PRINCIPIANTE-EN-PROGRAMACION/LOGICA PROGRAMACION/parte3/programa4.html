@@ -1,0 +1,32 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function disenarCircunferencia(x,y,radio) {
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    function limpiarPantalla(){ //función para limpiar pantalla
+        pincel.clearRect(0,0,600,400); //.clearRect() método para limpiar un rectángulo
+    }
+
+    var x = 0; //inicializamos x en 0
+
+    function actualizarPantalla(){
+        limpiarPantalla(); //llamamos a función para limpiar pantalla
+        disenarCircunferencia(x,20,20); //llamamos a función para disenarCircunferencia() argumentos x, posición en y, radio del círculo.
+        x++; //incrementamos x en 1
+    }
+    
+    setInterval(actualizarPantalla,20); // función de js que repetirá las acciones que le indiquemos en los parámetros. 
+    //En este caso llama a la función actualizarPantalla como primer parámetro, y en el segundo parámetro determina cada cuanto se realizará esta llamada (en miliseg).
+
+   
+</script>

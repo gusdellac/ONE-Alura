@@ -1,0 +1,96 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+    var colores = ["red","green","blue","grey"];
+    var color = "red";
+    
+    var puedoDibujar = false;
+    
+
+    function cuadradoPaleta(color,posX){  //función para dibujar los cuadrados de la paleta de colores
+        pincel.fillStyle = color;
+        pincel.fillRect(posX, 0, 50, 50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(posX,0,50,50)
+    }
+
+    cuadradoPaleta("red",0); // llamamos a función cuadradoPaleta() y le pasamos los argumentos que son color y posición en eje X
+    cuadradoPaleta("green",50);
+    cuadradoPaleta("blue",100);
+    cuadradoPaleta("grey",150);
+
+    function alterarColorPincel(evento){ //función para altera el color del pincel
+
+        let x = evento.pageX - pantalla.offsetLeft; 
+        let y = evento.pageY - pantalla.offsetTop; 
+
+        //Condicional para determinar cuando estaremos posicionados en cada paleta de color
+        if (x <= 50 && y <= 50){ //
+            color = colores[0];   
+        } else if ((x >= 50 && x <= 100) && y <= 50){
+            color = colores[1];
+        } else if ((x >= 100 && x <= 150)&& y <=50){
+            color =  colores[2];
+        } else if ((x >= 150 && x <= 200)&& y <=50){
+            color = colores[3];
+        }
+
+    }
+
+    pantalla.onclick = alterarColorPincel; //cuando hagamos click en la pantalla llamaremos a función alterarColorPincel()
+
+    function dibujarCirculo(x,y) {
+
+        if(puedoDibujar) {
+            
+            pincel.fillStyle = color;
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+        
+    }
+
+    function puedeDisenarArea(x,y){
+
+        if ((x >= 0 && x <= 205) && (y >= 0 && y <= 55)) {
+            return false;
+        } else{
+            return true;
+        }
+    }
+
+    function movientoMouse (evento){
+        let x = evento.pageX - pantalla.offsetLeft;
+        let y = evento.pageY - pantalla.offsetTop;
+
+        if (puedeDisenarArea(x,y)){
+            dibujarCirculo(x,y)
+        }
+    }
+
+    pantalla.onmousemove = movientoMouse;
+
+    
+
+    function habilitarDibujar() {
+        puedoDibujar = true; 
+    }
+
+    function deshabilitarDibujar() {
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+
+    
+
+</script>

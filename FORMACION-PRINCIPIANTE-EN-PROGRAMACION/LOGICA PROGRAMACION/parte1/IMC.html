@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULAR IMC</h1>
+     
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+       
+    }
+
+    function imprimir(frase) {
+        document.write(frase); 
+        saltarLinea();
+    }
+
+    function calcularImc(peso,altura) {
+
+        imc = peso / (altura * altura);
+        return(imc); //La función nos retorna un valor
+
+    }
+
+    function calcularImc2(peso,altura,nombre) {
+
+        imc = peso / (altura * altura);
+        imprimir("El IMC calculado de " + nombre + " es: " + imc); //La función llama a otra función y le da los argumentos de nombre y imc concatenados con strings.
+    }
+
+    var pesoGustavo = 65;
+    var alturaGustavo = 1.65;
+    //var imcGustavo = pesoGustavo/(alturaGustavo * alturaGustavo);
+
+    imprimir("El IMC de Gustavo es: " + calcularImc(pesoGustavo,alturaGustavo));
+
+    var pesoRamon = 80;
+    var alturaRamon = 1.75;
+
+    imprimir("El IMC de Ramon es: " + calcularImc(pesoRamon,alturaRamon));
+
+    //Código más eficiente y optimizado
+    calcularImc2(65,1.65,"Gustavo"); //Argumentos de tipo int y string
+    calcularImc2(80,1.75,"Ramon"); //Argumentos de tipo int y string
+
+
+    //Es una buena práctica utilizar las funciones para tareas específicas y no para que realicen múltiples tareas dentro de su bloque de código.
+    //Por lo general se utilizan para realizar una operación específica y que nos retorne el resultado de dicha operación. Es decir que sean objetivas.
+    //Calculamos el promedio de imc de dos personas de forma optimizada.
+    function calcularImc3 (peso,altura){
+
+        return (peso / (altura * altura)); //retornamos el imc directamente sin crear otra variable
+    }
+
+    imprimir("El promedio del Imc calculado de Cristian y Felipe es: " + (calcularImc3(71,1.72)+calcularImc3(75,1.73))/2);
+
+    imprimir("El promedio del Imc calculado de Gabriela y Luisa es: " + (calcularImc3(65,1.68)+calcularImc3(55,1.60))/2);
+
+    //Realizamos lo mismo pidiendo los datos al usuario
+    var nombre = prompt("Ingrese su nombre: ");
+    var pesoInformado = prompt(nombre + " digite su peso: ");
+    var alturaInformado = prompt(nombre + "digite su altura: ");
+
+    imprimir("El Imc calculado de "+ nombre + " es: " + calcularImc3(pesoInformado,alturaInformado));
+
+</script>

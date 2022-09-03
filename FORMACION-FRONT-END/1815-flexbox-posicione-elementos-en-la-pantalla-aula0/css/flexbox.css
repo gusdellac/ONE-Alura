@@ -1,0 +1,129 @@
+/*para comentar CSS :(ctrl +k) + (ctrl + c)
+para descomentar: (ctrl+k) + (ctrl+u)*/
+
+.headerPrincipal .container {
+    display: flex; /*posiciona los elementos uno al lado del otro*/
+    align-items: center; /*alineacion vertical al centro*/
+    justify-content: space-between; /*espacio entre los elementos*/
+}
+
+.headerPrincipal-nav{
+    display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*espaciado alrededor*/
+    width: 70%; /*Le indicamos que ocupe un 70% del ancho del container*/
+    margin-right: 5%; /*Margen derecho de 5%*/
+}
+
+.rodapePrincipal-contatoForm{
+    width: 25%; /*El form de contacto ocupara un 25% del container*/
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex; /*posiciona los elementos uno al lado del otro*/
+    flex-direction: column; /*direcciona los elementos en columnas. Por defecto es row (uno al lado del otro)*/
+    height: 250px; /*altura de cada columna*/
+    flex-wrap: wrap; /*propiedad que indica que al exceder el tamaño del padre el elemento
+    posterior se quiebra y se ubica al lado derecho*** */
+}
+
+.contenidoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link{
+    display: flex;
+    width: 23%;
+}
+
+.videoSobre .container{
+    display: flex;
+}
+
+.videoSobre-sobre{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSobre-video{
+    flex-grow: 2; /*aumenta el espacio que ocupa el item*/
+    flex-shrink: 2; /*reduce el espacio que ocupa el item*/
+}
+
+.videoSobre-sobre-list{
+    flex-grow: 2;
+}
+/*
+***
+Para arreglar nuestra situación debemos decirle a flex que no desborde el contenido, 
+de manera que cuando el contenido exceda el tamaño del padre, simplemente se rompa 
+a la siguiente columna. Para ello utilizamos flex-wrap: wrap.
+*/
+
+
+/* Responsive*/
+@media (max-width:768px){
+    .headerPrincipal .container{
+        flex-direction: column; /*los elementos se colocarán en columnas*/
+        align-items: initial; /*alinieación de elementos inicial*/
+        text-align: center; /*texto alineado al centro*/
+    }
+    
+    .headerPrincipal-nav{
+        flex-direction: column;
+    }
+    
+    .contenidoPrincipal-cursos{
+        flex-direction: column;
+    }
+    
+    .contenidoPrincipal-cursos-link{
+        width: 100%;
+    }
+    
+    .rodapePrincipal-navMap-list{
+        height: auto;
+        flex-wrap: nowrap;
+    }
+    
+    .rodapePrincipal-patrocinadores .container{
+        flex-direction: column;
+    }
+    
+    .rodapePrincipal-contatoForm{
+        width: 100%;
+    }
+    
+    .rodapePrincipal-patrocinadores-list{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .rodapePrincipal-contatoForm-fieldset{
+        justify-content: center;
+    }
+
+    .headerPrincipal-nav-link-app{
+        order: -1; /*colocamos el item referenciado por la clase en primer lugar.
+        Las posiciones de los elementos comienzan en 0 en adelante*/
+    }
+
+    .videoSobre .container {
+        flex-direction: column; 
+    }
+}

@@ -1,0 +1,23 @@
+<button id="boton">Haga clic</button>
+<script>
+
+    var boton = document.querySelector('#boton');
+
+    function botonHandler() {
+
+        alert('Hicieron clic en el Botón');
+    }
+
+
+    //boton.addEventListener('click',botonHandler());
+
+    /*En vez de asociar la función botonHandler para el evento click, María acabó asociando el retorno de la función, 
+    al adicionarle los paréntesis. Como la función no retorna nada, el código no será ejecutado, 
+    y será igual a nada cuando el botón es accionado. Para corregir el código basta retirar los paréntesis*/
+
+    boton.addEventListener('click',botonHandler);
+
+    /*En este caso, la función no está siendo llamada, está siendo pasada como un parámetro al evento click. 
+    Cuando el usuario haga clic en el botón, el navegador ejecutará implícitamente la función sin que percibamos.*/
+
+</script>

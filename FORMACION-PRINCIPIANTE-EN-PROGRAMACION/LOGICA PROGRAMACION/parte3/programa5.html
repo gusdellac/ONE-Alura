@@ -1,0 +1,74 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "white";
+    pincel.fillRect(0, 0, 600, 400);
+
+    // declaramos e inicializamos nuestro radio
+    var radio = 10;
+
+    //declaramos estas variables para poder utilizarlas en todo el código
+    var xAleatorio; //declaramos variable xAleatorio sin inicializarla 
+    var yAleatorio; //declaramos variable yAleatorio sin inicializarla 
+
+    
+
+    function disenarCircunferencia(x,y,radio,color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    function limpiarPantalla(){ 
+        pincel.clearRect(0,0,600,400);
+    }
+
+    //Función que diseña el objetivo y llama a función disenarCircunferencia() para que los dibuje
+    function disenarObjetivo(x,y){
+        disenarCircunferencia(x,y,radio +20, "red");
+        disenarCircunferencia(x,y,radio +10, "white");
+        disenarCircunferencia(x,y,radio, "red");
+    }
+
+    //función para obtener posición aleatoria
+    function sortearPosicion(maximo){
+        return Math.floor(Math.random()*maximo); //Math.floor() función para redondear un número hacia abajo. Math.random() número aleatorio entre 0 y 1 * parámetro máximo(int)
+    }
+
+    function actualizarPantalla(){
+        limpiarPantalla(); //llamamos a función limpiarPantalla()
+        xAleatorio = sortearPosicion(600); //llamamos a función sortearPosicion() y le damos el argumento del valor máximo que puede tomar en x (600)
+        yAleatorio = sortearPosicion(400); // llamamos a función sortearPosicion() y le damos el argumento del valor máximo que úede tomar en y (400)
+        disenarObjetivo(xAleatorio,yAleatorio); //llamamos a función disenarObjetivo() y le damos como argumentos la posición aleatoria obtenida en xAleatorio, yAleatorio
+        
+    }
+
+    setInterval(actualizarPantalla,1000); //función desde la cuál llamamos a función actualizarPantalla() la cuál se ejecuta cada 1 seg (1000ms) 
+
+
+    function disparar(evento){ //parámetro evento, lo recibe el compilador y nos habilita propiedades aplicables al evento
+
+        var x = evento.pageX - pantalla.offsetLeft; // asignamos a x la posición del evento en x menos el margen sobrante izquierdo
+        var y = evento.pageY - pantalla.offsetTop; // asignamos a y la posición del evento en y menos el margen sobrante superior
+
+
+        //Condicional para determinar si se acertó en el blanco
+
+        //planteamos 4 condiciones con conectores && (conector lógico Y). Se deben cumplir todas las condiciones para que se ejecute el código del if
+        if ((x < xAleatorio + radio) &&
+            (x > xAleatorio - radio) &&
+            (y < yAleatorio + radio) &&
+            (y > yAleatorio - radio)) {
+                
+            alert("Tiro certero");
+        }   
+    }
+
+    pantalla.onclick = disparar; //al clickear en pantalla llamamos a función disparar
+    
+
+   
+</script>

@@ -1,0 +1,666 @@
+:root {
+  --color-secondary: #1bf79b;
+}
+
+@media screen and (max-width: 1160px) {
+  .hero__image {
+    width: 370px;
+  }
+
+  .animated-border {
+    width: 360px;
+    height: 360px;
+  }
+
+  .hero__image img {
+    width: 340px;
+  }
+
+  .hero__text {
+    max-width: 460px;
+  }
+
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__subtitle {
+    font-size: 22px;
+  }
+
+  .about__image {
+    width: 420px;
+  }
+
+  .about__image img {
+    width: 420px;
+  }
+
+  .about__subtitle {
+    font-size: 33px;
+  }
+
+  .about__text {
+    width: 420px;
+    max-width: 420px;
+  }
+
+  .about__description,
+  .about__color {
+    font-size: 17px;
+  }
+
+  .skills__logo-top,
+  .skills__logo-bottom {
+    max-width: 980px;
+  }
+
+  .projects__card {
+    width: 100%;
+    max-width: 980px;
+    height: 460px;
+  }
+
+  .projects__btn a {
+    padding: 0.55em 2.35em;
+    font-size: 19px;
+  }
+
+  .border-contact {
+    width: 225px;
+    height: 225px;
+    top: 29px;
+  }
+
+  .footer {
+    width: 90%;
+    max-width: 980px;
+  }
+
+  .footer__item {
+    max-width: 980px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    height: 62px;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .nav__container {
+    width: 90%;
+    height: 62px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .nav__menu ul {
+    display: none;
+  }
+
+  /* Hamburguer Menu */
+
+  .nav__burguer {
+    width: 35px;
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .nav__burguer-line-1,
+  .nav__burguer-line-2,
+  .nav__burguer-line-3 {
+    display: block;
+    background-color: var(--color-secondary);
+    content: "";
+    height: 6px;
+    border-radius: 3px;
+    margin: 4px 0;
+    transition: all 450ms ease-in-out;
+  }
+
+  .nav__burguer-line-1.active {
+    transform: translatey(8px) rotate(135deg);
+  }
+
+  .nav__burguer-line-2.active {
+    transform: translate(-20px, -2px);
+    opacity: 0;
+  }
+
+  .nav__burguer-line-3.active {
+    transform: translatey(-12px) rotate(-135deg);
+  }
+
+  .nav__menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 70px 70px;
+    background-color: var(--color-background-dark);
+    transition: all 850ms ease;
+    clip-path: circle(0% at 100% 0%);
+  }
+
+  .nav__menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 70px 70px;
+    background-color: var(--color-background-dark);
+    transition: all 1s ease;
+    clip-path: circle(150% at 100% 0%);
+  }
+
+  .nav__menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto auto auto;
+  }
+
+  .nav__menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .nav__menu ul li a {
+    font-size: 25px;
+  }
+
+  .hero__container {
+    padding: 130px 0;
+  }
+
+  .hero__image {
+    width: 350px;
+    justify-content: center;
+  }
+
+  .animated-border {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero__image img {
+    width: 275px;
+  }
+
+  .hero__text {
+    width: 95%;
+    padding-top: 60px;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 36px;
+  }
+
+  .hero__description {
+    text-align: center;
+  }
+
+  .hero__social ul li {
+    margin: 0 10px;
+  }
+
+  .hero__container-content,
+  .about__container {
+    flex-direction: column;
+    /* height: auto; */
+  }
+
+  .about__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .title__container {
+    justify-content: center;
+  }
+
+  .about__title {
+    font-size: 40px;
+    margin-bottom: 80px;
+  }
+
+  .about__subtitle {
+    font-size: 37px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .about__description,
+  .about__color {
+    font-size: 20px;
+    width: 90%;
+  }
+
+  .about__image {
+    width: 100%;
+    padding-top: 55px;
+  }
+
+  .about__image img {
+    width: 90%;
+  }
+  .skills__title {
+    font-size: 40px;
+  }
+
+  .projects__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projects__btn a {
+    width: 47%;
+    font-size: 18px;
+    height: 50px;
+  }
+
+  .study__item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .title__contact {
+    padding-bottom: 130px;
+  }
+
+  .border-contact {
+    width: 225px;
+    height: 225px;
+    top: 29px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills__logo-top,
+  .skills__logo-bottom,
+  .skills__container {
+    flex-direction: column;
+  }
+
+  .skills__container {
+    max-width: 480px;
+  }
+
+  .skills__logo-top {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 35px;
+
+    padding: 0;
+  }
+
+  .skills__logo-bottom {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 35px;
+    padding: 0;
+  }
+
+  .study__item {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__info h3 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .contact__info strong {
+    font-size: 31px;
+  }
+
+  .footer {
+    max-width: 480px;
+  }
+
+  .footer__item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__reserved {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .footer__reserved p {
+    margin-bottom: 10px;
+  }
+
+  .footer__reserved p strong {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__title {
+    font-size: 31px;
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    font-size: 20px;
+  }
+
+  .hero__description {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .hero__image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .animated-border {
+    width: 255px;
+    height: 255px;
+    border: 14px var(--color-secondary);
+    border-top: 14px var(--color-background-dark);
+    border-radius: 50%;
+    border-style: outset;
+  }
+
+  .hero__image img {
+    width: 230px;
+  }
+
+  .hero__social ul li {
+    margin: 0 10px;
+  }
+
+  .about,
+  .skills,
+  .projects,
+  .study,
+  .contact {
+    padding: 65px 25px;
+  }
+
+  .about__image img {
+    width: 90%;
+  }
+
+  .about__title {
+    font-size: 40px;
+  }
+
+  .about__subtitle {
+    font-size: 26px;
+  }
+
+  .about__description {
+    font-size: 16px;
+  }
+
+  .about__color {
+    font-size: 16px;
+  }
+
+  .hero__button {
+    margin-top: 23px;
+    height: 23px;
+  }
+
+  .hero__social ul li,
+  .footer__social ul li {
+    margin: 0 10px;
+  }
+
+  .skills__title {
+    font-size: 40px;
+  }
+
+  .skills__logo-top,
+  .skills__logo-bottom {
+    padding: 0 50px;
+  }
+
+  .skills__logo svg {
+    width: 60px;
+  }
+
+  .projects__item {
+    gap: 32px;
+  }
+
+  .projects__card {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+  }
+
+  .projects__card-description-hover {
+    width: 92%;
+    height: 66%;
+    top: 2.9rem;
+    padding: 10px;
+  }
+
+  .projects__card-decription-text {
+    font-size: 13.2px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .used-technologies p {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .projects__card h3 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .projects__btn {
+    padding: 0 12px 12px 12px;
+  }
+
+  .projects__btn a {
+    padding: 0.35em 1.65em;
+    height: 40px;
+    width: 48%;
+    font-size: 16px;
+  }
+
+  .contact__info h3 {
+    font-size: 24px;
+  }
+
+  .contact__info strong {
+    font-size: 28px;
+  }
+
+  .contact__card-btn {
+    padding: 12px 35;
+  }
+
+  .contact-profile {
+    width: 220px;
+  }
+
+  .contact__one a,
+  .fa-envelope {
+    font-size: 18.5px;
+  }
+
+  .border-contact {
+    width: 191px;
+    height: 191px;
+    top: 26px;
+  }
+
+  .contact__phone a,
+  .fa-phone {
+    font-size: 18px;
+  }
+
+  .footer__reserved {
+    font-size: 13.2px;
+  }
+  .top-button {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(43, 235, 91, 0.356);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about__title,
+  .skills__title,
+  .study__title,
+  .projects__title {
+    font-size: 37px;
+  }
+
+  .about,
+  .skills,
+  .projects,
+  .study,
+  .contact {
+    padding: 65px 5px;
+  }
+
+  .animated-border {
+    width: 197px;
+    height: 197px;
+    border: 11px var(--color-secondary);
+    border-top: 11px var(--color-background-dark);
+    border-radius: 50%;
+    border-style: outset;
+  }
+
+  .hero__image img {
+    width: 180px;
+  }
+
+  .hero__subtitle {
+    font-size: 15px;
+  }
+
+  .hero__description {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .hero__button {
+    height: 20px;
+    width: 140px;
+    font-size: 12px;
+    margin-top: 16px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .hero__subtitle {
+    margin-top: 12px;
+  }
+
+  .hero__social ul li,
+  .footer__social ul li {
+    margin: 0 7px;
+  }
+
+  .study__container {
+    width: 90%;
+  }
+
+  .projects__container {
+    width: 93%;
+  }
+
+  .projects__card {
+    height: 300px;
+  }
+
+  .projects__card-description-hover {
+    height: 72%;
+    top: 2.2rem;
+  }
+
+  .projects__card-decription-text {
+    font-size: 13.2px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+
+  .projects__card h3 {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
+  .projects__btn {
+    padding: 0 10px 10px 10px;
+  }
+
+  .projects__btn a {
+    padding: 0.35em 1.05em;
+    height: 30px;
+    width: 48%;
+    font-size: 13px;
+    border-radius: 5px;
+  }
+
+  .nav__menu ul li a {
+    font-size: 22px;
+  }
+
+  .skills__logo p {
+    font-size: 15px;
+  }
+
+  .contact__item {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .contact-profile {
+    width: 205px;
+  }
+
+  .border-contact {
+    width: 177px;
+    height: 177px;
+  }
+
+  .contact__card-btn {
+    padding: 17px 45px;
+  }
+
+  .footer__reserved {
+    font-size: 15px;
+  }
+}

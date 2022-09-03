@@ -1,0 +1,23 @@
+EJEMPLO DE CREACIÓN DE CÓDIGO HTML CON PLUGIN EMMET:
+
+EMMET:
+section.destacados.container>h2.destacados__titulo+(a*2>figure.destacados__panel>img.destacados__panel-imagen+figC.destacados__panel-texto)+a.destacados__boton
+
+RESULTADO HTML:
+
+	<section class="destacados container">
+                <h2 class="destacados__titulo"></h2>
+                <a href="#">
+                    <figure class="destacados__panel">
+                        <img src="" alt="" class="destacados__panel-imagen">
+                        <figC class="destacados__panel-texto"></figC>
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure class="destacados__panel">
+                        <img src="" alt="" class="destacados__panel-imagen">
+                        <figC class="destacados__panel-texto"></figC>
+                    </figure>
+                </a>
+		<a href="#" class="destacados__boton"></a>
+	</section>

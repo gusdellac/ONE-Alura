@@ -1,0 +1,55 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    
+    function dibujarBarra(x,y,serie, colores, texto) {
+
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        escribirTexto(x,y,texto); //llamamos a funcion escribirTexto y le damos los argumentos
+
+        var color = "";
+        var altura = 0;
+
+        for (let i = 0; i < serie.length; i++) { //recorremos el arreglo
+
+            var base = 50; //la base será igual para todos los rectángulos
+            var altura = serie[i]; // asignamos a var altura los valores del array[serie] de cada posición determinada por i
+            var color = colores[i]; //asignamos a var color los valores del array[colores] de cada posición determinada por i
+
+            //dibujamos los rectángulos
+            pincel.fillStyle = color;
+            pincel.fillRect(x,y, base, altura);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x,y, base, altura);
+
+            y = y + serie[i]; //nos vamos posicionando en el eje y sumando el acumulado de los porcentajes
+
+        }
+
+    }
+
+    function escribirTexto(x , y, texto) { 
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font="15px Georgia";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x, y-10);   //se escribe el texto 10 pixeles arriba de los gráficos 
+    }
+
+    var serie2009 = [6, 47, 41, 3, 3]; // array para ingresar los porcentajes de la serie 2009
+    var serie2019 = [81, 9, 3, 3, 4]; // array para ingresar los porcentajes de la serie 2019
+
+    var colores = ["blue","green","yellow", "red","gray"]; //array para los colores de cada porcentaje
+
+    dibujarBarra(50,50,serie2009, colores, "2009"); // llamamos a la función dibujarBarra y le damos los argumentos necesarios
+    //x,y,serie(porcentajes), color(porcentajes), texto.
+    dibujarBarra(150,50,serie2019, colores, "2019"); 
+
+
+   
+
+</script>

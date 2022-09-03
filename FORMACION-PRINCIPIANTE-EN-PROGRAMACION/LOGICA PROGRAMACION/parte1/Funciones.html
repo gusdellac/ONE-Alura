@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+
+    //alert() alert es una función reservada para generar un pop-up
+    //document.write() es una función reservada para mostrar datos en pantalla 
+    //las funciones se definen al inicio del código
+
+    //Sintaxis función
+    function saltarLinea() { //La declaramos con la palabra reservada function
+
+        document.write("<br>"); //Bloque de codigo que ejecutamos dentro de la función
+
+    }
+
+    function imprimirPantalla(frase) { //le damos a la función el párametro frase que es una variable que almacenará el argumento
+        //con el que se llame a la función. En js no es necesario declarar esta variable previamente.
+        
+        document.write(frase);
+        saltarLinea(); //Llamamos a otra función, ejecutará tambien un salto de línea cada vez que la llamemos.
+
+    }
+
+    //var frase = "Imprimiendo con una función creada"; (No es necesario declarar esta variable para usarla como párametro)
+    var anho = 2030
+
+    document.write("Hola salto de línea");
+    saltarLinea(); //Llamamos a la función sin darle parámetros
+    
+    document.write("Salto de línea");
+    saltarLinea();
+  
+    imprimirPantalla("Imprimiendo con una función creada <br>"); //Llamamos a la funcion imprimirPantalla y le damos como argumento un string.
+    //Este string se guardará dentro de la variable frase. Tener en cuenta que la variable frase no fué declarada previamente.
+    imprimirPantalla("Juan tiene: " + (anho - 2000) + " años."); //Llamos a la función y le damos como argumento una concatenación de strings con datos tipo int.
+    //Js realiza la operación antes de mandarla como argumento, y convierte el dato de tipo int en tipo string y lo concatena. Por esta razón la variable
+    //utilizada como parámetro en la función recibirá un argumento de tipo string y no con dos tipos de datos, lo que generaría un error en el código.
+
+
+</script>

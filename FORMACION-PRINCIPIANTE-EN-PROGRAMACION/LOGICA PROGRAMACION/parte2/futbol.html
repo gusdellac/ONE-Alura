@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA PARA CALCULAR PUNTOS DE UN EQUIPO DE FUTBOL</h1>
+
+<script>
+    
+    function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea()
+
+    }
+    //La función prompt siempre convertirá lo ingresado por el usuario en string, ya sean string o integers
+
+    var victorias = parseInt(prompt("Infomre la cantidad de victorias")); //Utilizamos parseInt para convertir un string a int.
+    var empates = parseInt(prompt("Informe la cantidad de empates")); //Utilizamos parseInt para convertir un string a int.
+
+    var puntosTotal = victorias * 3 + empates; 
+
+    imprimir("El total de puntos del equipo es: " + puntosTotal);
+
+
+    //"10" *20 = 200
+    //"10" + 20 = "1020"
+    //Javascript cuanto intentamos hacer un producto entre un string y un número convierte el string en número,
+    //en cambio cuando se trata de una suma convierte el integer a string y lo concatena al otro string.
+</script>

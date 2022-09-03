@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-encriptador.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">   
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <main>
+
+            <section class="logo-alura">
+                <img src="imagenes/Logo.png">
+            </section>
+
+            <section class="campo-texto">
+                <input id="input" type="text" required class="texto" placeholder="Ingrese el texto aquí">
+            </section>
+
+            <img class="unicode" src="imagenes/Vector.png">
+            <p class="condicion">Solo letras minúsculas y sin acentos</p>
+
+            <section class="ubicacion-boton-e">
+                <button type="button" class="boton-encriptar" onclick="encriptar(input.value)"><h1 class="texto-encriptar">Encriptar</h1></button>
+            </section>
+
+            <section class="ubicacion-boton-d">
+                <button type="button" class="boton-desencriptar" onclick="desencriptar(input.value)"><h1 class="texto-desencriptar">Desencriptar</h1></button>
+            </section>
+
+            
+
+            <section class="rectangle">
+                <div id="div">
+                    <img class="muneco" src="imagenes/robot5.png">
+                    <h1 class="mensaje-no-encontrado">Ningún mensaje fue encontrado</h1>
+                    <h2 class="ingresa-texto">Ingresa el texto que desees encriptar o desencriptar</h2>
+                </div>
+
+                <p class="texto-desencriptado"><span id="desencriptar"></span></p>
+                <p class="texto-encriptado"><span id="encriptar"></span></p>
+                
+                <div class="ubicacion-boton-copiar">
+                    <button id="copy" class="boton-copiar"><p class="texto-copiar">Copiar</p></button>
+                </div>
+                
+            </section>
+
+            <div class="created">
+                <p class="text-created">Created by Gustavo De Llac</p>
+                <a href="https://github.com/gusdellac"><img class="github" src="imagenes/github.png"></a><a href="https://www.instagram.com/gustavodellac/"><img class="instagram" src="imagenes/instagram2.png"></a><a href="https://twitter.com/gus_dellac"><img class="twitter" src="imagenes/twitter.png"></a>
+            </div>
+            
+            
+            
+            <script>
+
+                function encriptar() {
+                    var frase = input.value;
+                    var fraseEncriptada = "";
+                    for (var i = 0; i < frase.length; i++) {
+                        letra = "";
+                        letra = frase.substring(i,i+1);
+                        for (var j = 0; j <= letra.length; j++) {
+                            if (letra == "a") {
+                                fraseEncriptada = fraseEncriptada + "ai";
+                                break;
+                            }
+                            if (letra == "e") {
+                                fraseEncriptada = fraseEncriptada + "enter";
+                                break;
+                            }
+                            if (letra == "i") {
+                                fraseEncriptada = fraseEncriptada + "imes";
+                                break;
+                            }
+                            if (letra == "o") {
+                                fraseEncriptada = fraseEncriptada + "ober";
+                                break;
+                            }
+                            if (letra == "u") {
+                                fraseEncriptada = fraseEncriptada + "ufat";
+                                break;
+                            }
+                            else {
+                                fraseEncriptada = fraseEncriptada + letra;
+                                break;
+                            }   
+                        } 
+                        console.log(fraseEncriptada);
+                    }
+                    imprimir(fraseEncriptada);
+                }
+                function imprimir(fraseEncriptada){
+                    document.getElementById("div").style.display = "none";
+                    document.getElementById('encriptar').innerHTML = fraseEncriptada;
+                }
+                var input = document.querySelector("input"); 
+                input.focus(); 
+
+            </script>
+            
+            <script>
+
+                function desencriptar() {
+                    var frase = input.value;
+                    var fraseDesencriptada = ""
+                    for (var i = 0; i < frase.length; i++) {
+                        letra = "";
+                        letra = frase.substring(i,i+1);
+                        for (var j = 0; j <= letra.length; j++) {
+                            if (letra == "a") {
+                                fraseDesencriptada = fraseDesencriptada + "a";
+                                break;
+                            }
+                            if (letra == "e") {
+                                fraseDesencriptada = fraseDesencriptada + "e";
+                                break;
+                            }
+                            if (letra == "i") {
+                                fraseDesencriptada = fraseDesencriptada + "i";
+                                break;
+                            }
+                            if (letra == "o") {
+                                fraseDesencriptada = fraseDesencriptada + "o";
+                                break;
+                            }
+                            if (letra == "u") {
+                                fraseDesencriptada = fraseDesencriptada + "u";
+                                break;
+                            }
+                            else {
+                                fraseDesencriptada = fraseDesencriptada + letra;
+                                break;
+                            }
+                        }  
+                        console.log(fraseDesencriptada); 
+                    }
+                    imprimir(fraseDesencriptada);
+                }
+                function imprimir(fraseDesencriptada){
+                    document.getElementById("div").style.display = "none";
+                    document.getElementById('desencriptar').innerHTML = fraseDesencriptada;
+                }
+                var input = document.querySelector("input"); 
+                input.focus(); 
+
+            </script>
+
+            <script>
+
+                function copy() {
+                    let copyText = document.querySelector("#input");
+                    copyText.select();
+                    document.execCommand("copy");
+                }                  
+                document.querySelector("#copy").addEventListener("click", copy);
+                
+            </script>
+
+        </main>
+        
+      
+       
+
+    </body>
+
+</html>
+
+<!---->
+

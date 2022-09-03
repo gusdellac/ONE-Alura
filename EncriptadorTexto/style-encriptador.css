@@ -1,0 +1,394 @@
+
+main {
+    width: 1920px;
+    height: 1080px;
+    /*background: #F3F5FC;*/
+    background: url(imagenes/carretra-con-aro-de-universo-azul_1920x1080_xtrafondos.com.jpg);
+}
+
+.logo-alura{
+    position: absolute;
+    top: 30px;
+    transition: 0.5s all;
+}
+
+.logo-alura:hover{
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.campo-texto{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+}
+
+
+section input{
+    border: 0ch;
+}
+
+.texto , ::placeholder{
+    font-family: 'Inter';
+    background: none;
+    color: #6c7784;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    outline: none;
+
+}
+
+.unicode{
+    position: absolute;
+    left: 252px;
+    top: 852px;
+}
+
+.condicion{
+    position: absolute;
+    width: 205px;
+    height: 18px;
+    left: 264px;
+    top: 851px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+
+    opacity: 0.8;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+.ubicacion-boton-e{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 24px;
+}
+
+    
+.boton-encriptar{
+    border: 0;
+    position: absolute;
+    width: 328px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+    background: rgba(0, 0, 0, 0.3);;
+    /*background: #0A3871;*/
+    border-radius: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+    
+}
+
+.boton-encriptar:hover{
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    
+}
+
+.boton-encriptar:active{
+    
+    background: linear-gradient(70deg, rgba(8, 18, 71, 0.539), rgba(22, 72, 143, 0.316),rgba(172, 26, 205, 0.219));
+    transition: none;
+    
+}
+
+.texto-encriptar{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(163, 163, 163, 0.825);
+    font-weight: bold;
+}
+
+.ubicacion-boton-d{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 24px;
+}
+
+.boton-desencriptar{
+    position: absolute;
+    width: 328px;
+    height: 67px;
+    left: 592px;
+    top: 885px;
+    background: rgba(0, 0, 0, 0.3);;
+    /*background: #D8DFE8;*/
+    border: none;
+    box-sizing: border-box;
+    border-radius: 24px;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.boton-desencriptar:hover{
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.boton-desencriptar:active{
+    background: linear-gradient(70deg,rgba(172, 26, 205, 0.219),rgba(22, 72, 143, 0.316), rgba(8, 18, 71, 0.539));
+    transition: none;
+}
+
+.texto-desencriptar{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(163, 163, 163, 0.825);
+    font-weight: bold;
+}
+
+/*.rectangle{
+    background: url(imagenes/Rectangle\ 1.png);
+    position: absolute;
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+}*/
+
+.rectangle{
+    position: absolute;
+    width: 400px;
+    height: 944px;
+    left: 1450px;
+    top: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    text-align: center;
+}
+
+.muneco{
+    position: absolute;
+    width: 336px;
+    /*height: 304px;*/
+    top: 243px;
+    left: 32px;
+    cursor: pointer;
+}
+
+
+
+.mensaje-no-encontrado{
+    position: absolute;
+    width: 336px;
+    height: 58px;
+    left: 32px;
+    top: 579px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+
+.ingresa-texto{
+
+    position: absolute;
+    width: 336px;
+    height: 48px;
+    left: 32px;
+    top: 653px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  
+    text-align: center;
+
+    color: #495057;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+
+.texto-encriptado{
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    top: 243px;
+    left: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(123, 124, 133, 0.825)
+    /*color: #495057;*/
+}
+
+.texto-desencriptado{
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    top: 243px;
+    left: 32px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(163, 163, 163, 0.825);
+
+    /*color: #495057;*/
+}
+
+.ubicacion-boton-copiar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 24px;
+}
+
+.boton-copiar{
+
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 850px;
+    left: 90px;
+    background: rgba(0, 0, 0, 0.3);
+    /*background: #D8DFE8;*/
+    border: none;
+    box-sizing: border-box;
+    border-radius: 24px;
+    cursor: pointer;
+
+}
+
+.boton-copiar:hover{
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: 0.5s;
+}
+
+.boton-copiar:active{
+    
+    background: rgba(9, 15, 204, 0.362);
+    transition: none;
+}
+
+.texto-copiar{
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: bold;
+    
+    text-align: center;
+    color: rgba(123, 124, 133, 0.825);
+
+}
+
+.boton-copiar:hover{
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+ 
+.created{
+    position: absolute;
+    top: 1030px;
+    left: 247px;
+
+}
+
+.text-created{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: bold;
+    
+
+    text-align: center;
+    color: rgba(123, 124, 133, 0.825);
+    float: left;
+}
+
+.github{
+    position: absolute;
+    top: -20px;
+    left: 220px;
+    cursor: pointer;
+}
+
+.instagram{
+    position: absolute;
+    top: -10px;
+    left: 270px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.twitter{
+    position: absolute;
+    top: -8px;
+    left: 310px;
+    width: 30px;
+    cursor: pointer;
+}

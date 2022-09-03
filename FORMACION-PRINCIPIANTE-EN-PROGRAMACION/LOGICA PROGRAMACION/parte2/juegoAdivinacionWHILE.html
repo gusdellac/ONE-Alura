@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA ADIVINAR NÚMERO</h1>
+     
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+       
+    }
+
+    function imprimir(frase) {
+        document.write(frase); 
+        saltarLinea();
+    }
+
+    var numeroSistema = Math.round(Math.random()*10); 
+    var intentos = 3;
+    var contador = 1;
+
+
+    while (contador <= intentos) {
+
+        var numeroInformado = parseInt(prompt("Ingrese un número entre 0-10")); //Los pop up se ejecutan antes que el resto del código.
+
+        if (numeroInformado == numeroSistema) { 
+
+            alert("Usted acertó el número, en el intento " + contador + ", el número pensado era " + numeroSistema);
+            break; //Si se cumple el if este comando finalizará el while.
+        
+        } else { 
+
+            alert("Uste no acertó el número");
+
+        }
+
+        contador++;
+
+    }
+
+    imprimir("FIN");
+  
+</script>

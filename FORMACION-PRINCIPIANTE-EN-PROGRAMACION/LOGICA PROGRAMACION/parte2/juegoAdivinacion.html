@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA ADIVINAR NÚMERO</h1>
+     
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+       
+    }
+
+    function imprimir(frase) {
+        document.write(frase); 
+        saltarLinea();
+    }
+
+    var numeroSistema = Math.round(Math.random()*10); //Número aleatorio: Math random nos devuelve un float entre 0 y 1, al multiplicarlo por 10 nos devuelve un float
+    //entre 0 y 10 - usamos Math.round para que nos redondee el valor y lo convierta en un int
+    var numeroInformado = parseInt(prompt("Ingrese un número entre 0-10")); //Pasamos el número ingresado como string a int
+
+
+    //SI
+    if (numeroInformado == numeroSistema) { //El if necesita recibir el resultado de una operación lógica ente ()
+
+        imprimir("Usted acertó el número");
+    //SINO
+    } else { //Cuando termina el bloque de código del if{} comienza el del else{}
+
+        imprimir("Uste no acertó el número, el número del sistema era: " + numeroSistema );
+
+    }
+  
+</script>
