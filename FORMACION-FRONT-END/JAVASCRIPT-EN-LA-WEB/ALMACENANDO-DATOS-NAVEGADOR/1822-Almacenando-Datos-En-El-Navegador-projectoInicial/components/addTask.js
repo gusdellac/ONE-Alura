@@ -75,7 +75,7 @@ export const createTask = ({value,dateFormat,complete,id}) => { /*la función cr
     dateElement.innerHTML = dateFormat;
     task.appendChild(taskContent);
     task.appendChild(dateElement);
-    task.appendChild(deleteIcon(id));
+    task.appendChild(deleteIcon(id)); //llamada a función deleteIcon() con parámetro id
     return task;
 };
 
