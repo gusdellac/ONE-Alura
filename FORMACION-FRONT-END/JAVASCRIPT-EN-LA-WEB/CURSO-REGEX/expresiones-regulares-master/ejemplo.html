@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica RegExp</title>
+</head>
+
+<body>
+    <script>
+        // const text = "11a22b33c";
+
+        // //const expression = new RegExp("(\\d\\d\\w)","g"); 
+        // /*creamos una instancia del objeto RegExp() 
+        // 1er parámetro: RegExp a ejecutar, notar que las "\" deben colocarse dos veces para que javascript las interprete.
+        // 2do paráemtro: "g" global, buscará la regexp en todo el string (corroborar esto último) */
+
+        // const expression = /(\d\d\w)/g; /*otra sintaxis para crear una RegExp*/
+
+        // console.log(expression.test(text)); /*utilizamos el método test() para que nos devuelva un booleano
+        // true/false para saber si la regexp se encuentra en el string que pasamos como parámetro*/
+        // expression.lastIndex = 0; /*al ejecutar el método anterior de test() cuando la regexp encuentra la primer coincidencia
+        // devuelve un true y no el array con los valores del string encontrado. Es decir en este caso, salta al índice 3 y 
+        // devuelve las demás conincidencias. Por esto podemos reasignar un valor a la propiedad lastIndex para indicar el índice por el cual
+        // comenzará a verificar conincidencias la regexp*/
+
+        // while(result = expression.exec(text)){//método exec() ejecutará la regexp)
+        //     console.log(result);
+        // }; 
+
+
+        /*Ejercicio 1: 
+        Nuestra misión es cambiar todos los guiones por una /. String´s en JavaScript son objetos 
+        y poseen métodos especiales que aceptan expresiones regulares, como es el caso del método replace. */
+
+        var anoMesDia = "2007-12-31";
+        var exp = /-/g;
+        //buscamos cuantos guiones existen
+        var guionesEncontrados = 0;
+        while (exp.exec(anoMesDia)) {
+            guionesEncontrados += 1;
+        }
+        console.log(`Los guiones encontrados fueron: ${guionesEncontrados}`);
+
+        /*reemplazamos los guiones por /
+        usamos el método replace()*/
+        //método replace()
+        anoMesDia = anoMesDia.replace(exp, '/');
+
+        console.log(anoMesDia);
+
+        //Ejercicio 2
+        /*Necesitamos extraer todos los valores de esta string para al fin sumarlos. 
+        Para tareas como esa, hay el método split que todo objeto String posee. 
+        Podemos pasar un separador que se encargará de crear un arreglo con cada 
+        ítem considerando el separador utilizado*/
+
+        var arquivo = '100,200-150,200;20';
+        var exp = /[,;-]/;
+        //método split()
+        var valores = arquivo.split(exp);
+        console.log(valores);
+
+        var sumarValores = 0;
+        for (let i = 0; i < valores.length; i++) {
+            let valorEncontrado = parseInt(valores[i]);
+            sumarValores += valorEncontrado;
+        };
+        console.log(`La sumatoria de todos los valores es: ${sumarValores}`);
+        var sumandoValores = 0;
+        valores.forEach((valor)=>{
+            sumandoValores += parseInt(valor);
+        });
+        console.log(`La sumatoria de todos los valores es: ${sumandoValores}`);
+
+        /*Ejercicio 3*/
+        var codigos = 'A121B12112C12212F12G01';
+        var exp = /[A-Za-z]\d+/g;
+        /*¿Y ahora? ¿Cómo extraer para un arreglo quien sigue ese patrón? Toda string en JavaScript posee el método match. 
+        Este método acepta una expresión regular y regresa un arreglo con todas las partes del blanco que atienden la expresión regular*/
+        //método match()
+        var codigosExtraidos = codigos.match(exp);
+        console.log(codigosExtraidos);
+
+
+
+    </script>
+</body>
+
+</html>

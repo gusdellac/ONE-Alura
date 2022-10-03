@@ -1,0 +1,19 @@
+Para  trabajar con módulos en nuestro proyecto de js y ejecutarlos con node debemos indicarle
+que utilizaremos módulos. Esto se realiza mediante la creación de un archivo
+package.json.
+
+Comando = npm init : para iniciar un package.json
+Debemos completar los siguientes datos:
+package name : "nombre proyecto (utilizar letras minusculas todo seguido)"
+version : (1.0.0) por defecto
+description: "descripción"
+entry point: (index.js) por defecto (archivo que será ejecutado como main)
+test command:
+git repository:
+keywords:
+author: "Curso Alura"
+license: "ISC" por defecto
+""""package.json iniciado"""
+
+Dentro del archivo package.json debemos colocar:
+"type":"module"  

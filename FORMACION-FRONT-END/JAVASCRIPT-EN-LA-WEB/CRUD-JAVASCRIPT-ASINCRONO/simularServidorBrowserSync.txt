@@ -1,0 +1,6 @@
+Simular servidor local utilizando librería Browsersync.
+npm (node package manager)
+
+npm install -g browser-sync   : para instalar la librería (-g : para instalar globalmente)
+browser-sync   :  lista de comandos
+browser-sync start --server --file . --host --port 5000 --startPath directorioArchivo/archivo.html    :   inicializamos el servidor local en el puerto 5000 referenciando al archivo a ejecutar
