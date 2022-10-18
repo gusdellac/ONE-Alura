@@ -2,7 +2,7 @@ import { clientServices } from "../service/client-service.js"; //importamos obje
 
 const formulario = document.querySelector("[data-form]"); //seleccionamos el objeto html por su data attribute
 
-formulario.addEventListener("submit",(event) => { 
+formulario.addEventListener("submit",(event) => { //escuchamos el evento submit del formulario, luego ejecutamos la arrow function
     event.preventDefault();
     const nombre = document.querySelector("[data-nombre]").value; //extraemos el value del input del nombre referenciando el data attribute data-nombre
     const email = document.querySelector("[data-email]").value; //extraemos el value del input del nombre referenciando el data attribute data-email

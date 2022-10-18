@@ -34,10 +34,48 @@ const crearCliente = (nombre, email)=>{ //arrow function recibe dos parámetros 
   });
 };
 
-export const clientServices = {  //creamos un objeto clientServices y lo exportamos
-  listaClientes, //colocamos nuestra función listaClientes()
-  crearCliente,
+//función para eliminar cliente
+const eliminarCliente = (id)=>{ //arrow function recibe como parámetro id
+  return fetch(`http://localhost:3000/perfil/${id}`, { /*método fetch(), 1er parámtro --> url del servidor,
+  lo colocamos entre backticks para incrustar la variable id. Con esto logramos indicar el elemento que deseamos eliminar
+  de los datos que se encuentran en nuestro archivo db.json
+  */
+    method: "DELETE", //2do parámetro --> objeto con el atributo method : "DELETE"
+  });
+}
+
+//función para obtener los clientes
+const detalleCliente = (id) => {
+  return fetch(`http://localhost:3000/perfil/${id}`).then(respuesta => respuesta.json())
+  .catch(err => {
+    console.log(err);
+    window.location.href = "/screens/error.html";
+  });
 };
+
+//función para modificar un cliente
+const actualizarCliente = (nombre, email, id) => {
+  return fetch(`http://localhost:3000/perfil/${id}`, {
+    method : "PUT",
+    headers: {
+      "Content-Type" : "application/json"
+    },
+    body : JSON.stringify({nombre, email})
+  }).then(respuesta => console.log(respuesta)).catch(err => console.log(err));
+};
+
+//creamos un objeto clientServices y lo exportamos
+export const clientServices = {  /* Dentro de este objeto guardaremos los métodos http (CRUD)
+que nos sirven para gestionar los datos de nuestro servidor. Exportamos el objeto para que pueda ser
+accedido por otros módulos.
+*/
+  listaClientes, 
+  crearCliente,
+  eliminarCliente,
+  detalleCliente,
+  actualizarCliente,
+};
+
 //Fetch API (sintaxis resumida de lo anterior)
 // const listaClientes = () => { return fetch("http://localhost:3000/perfil").then((respuesta)=>respuesta.json()); 
 // };

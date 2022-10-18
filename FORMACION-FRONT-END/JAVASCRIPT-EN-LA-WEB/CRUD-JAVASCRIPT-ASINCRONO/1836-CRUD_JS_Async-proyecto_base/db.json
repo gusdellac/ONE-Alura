@@ -3,32 +3,22 @@
     {
       "nombre": "Gustavo De Llac",
       "email": "gustavodellac@gmail.com",
-      "id": "245edc3d-1789-4ab5-af32-6fb8c2a691ab"
-    },
-    {
-      "nombre": "Agustina De Llac",
-      "email": "agustinadellac@gmail.com",
-      "id": "ecf34dcd-e9e2-4f69-8e49-7b97736bab97"
-    },
-    {
-      "nombre": "Diego De Llac",
-      "email": "diegodellac@gmail.com",
-      "id": "8821237c-2c8d-4434-a2a1-2042ab0d5884"
+      "id": "1669ebe6-e1f1-49a5-9765-b443c917517c"
     },
     {
       "nombre": "Arduizur Glickman",
       "email": "arduizur@gmail.com",
-      "id": "df0d7a58-ce58-47e8-a00f-88b04a17ae95"
+      "id": "992f669b-3fbc-4fc2-902e-b379f3192f3c"
     },
     {
-      "nombre": "Ariel De Llac",
-      "email": "arieldellac@gmail.com",
-      "id": "3da063d4-48a2-4798-9fd4-5420f757de08"
+      "nombre": "Diego De Llac",
+      "email": "diegodellac@gmail.com",
+      "id": "0a7637c9-2711-49e9-91f2-7ee2dac9aa9a"
     },
     {
-      "nombre": "Maria Cristina Barro",
-      "email": "cristina@gmal.com",
-      "id": "baa6773b-74fe-4d0a-8a62-8363ef0dab04"
+      "nombre": "Agustina De Llac",
+      "email": "agustinadellac@gmail.com",
+      "id": "c494a6a7-b99c-4ae4-9e2a-2f43d9212b58"
     }
   ]
 }

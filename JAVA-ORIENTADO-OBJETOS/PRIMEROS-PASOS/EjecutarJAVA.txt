@@ -1,0 +1,27 @@
+Para ejecutar JAVA desde cualquier ubicación del sistema:
+(cuando instalamos las últimas versiones de jdk o algún ide? esta configuración se genera durante la instalación)
+
+- Editar variables de entorno del sistema.
+- variables de entorno
+- agregar nueva variable de entorno
+- nombre variable: JAVA_HOME
+- valor de la variable: ruta del sistema en donde se encuentra el jdk y dentro la carpeta bin. (aquí encontramos el javac.exe)
+aceptamos
+
+- buscamos en variables de sistema Path.
+- editamos la variable Path
+- agregamos nueva linea
+- agregamos la ruta o url de java/jdk/bin 
+
+
+
+Configuración del PATH en Windows
+1) Ve al panel de control, busca y selecciona Sistema, después de eso, haz clic en Configuración avanzada del sistema.
+
+2) En la pestaña "Avanzado", haz clic en variables de entorno y en la ventana "Variables del sistema" selecciona " Path " y haz clic en editar.
+
+3) En esta nueva ventana, haz clic en el botón nuevo y en la línea que fue seleccionada (última), coloca la ruta a tu directorio bin dentro de la carpeta jdk, que a su vez está dentro de la carpeta java.
+
+4) Guarda el cambio haciendo clic en Aceptar y cierra todas las ventanas.
+
+5) Después de hacerlo, cierra la consola de línea de comandos y ábrela nuevamente.

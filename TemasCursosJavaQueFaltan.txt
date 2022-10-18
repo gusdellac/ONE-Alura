@@ -1,0 +1,591 @@
+Curso de
+Java y java.lang: Programe con la clase Object y String
+
+
+Realice este curso para Java y:
+Use imports y organize tu código a través de packages
+Compreende el significado de todos los modificadores de visibilidade tratamento de exceciones
+Documenta y distribuye tu biblioteca
+Conozca java.lang
+Entenda la imutabilidad y la classe String
+Aprende para que existe la clase java.lang.Object
+Aulas
+Organizando clases con paquetes Ver el primer video
+0 / 12
+40min
+Presentación
+Usando Paquetes
+Acerca de FQN
+Acerca de Paquetes
+La mejor opción de paquete
+Actualizando Clases
+Importando Clases
+Estructura de Clases
+Estructura correcta
+¿Dominas los paquetes?
+Haga lo que hicimos en clase: Trabajando con paquetes
+Lo que aprendimos
+Todos los modificadores de acceso
+0 / 7
+9min
+Proyecto del aula anterior
+Modificadores de Acceso
+Acerca de los modificadores
+¿Cuál modificador? #1
+¿Cuál modificador? #2
+Haga lo que hicimos en clase: Modificadores de acceso
+Lo que aprendimos
+Distribución de código
+0 / 16
+39min
+Proyecto del aula anterior
+Documentación Javadoc
+Generando Javadoc
+¿Qué comentario?
+Sobre javadoc
+Para saber más: Todas las etiquetas
+Otras anotaciones
+Archivos JAR
+Usando Bibliotecas con JAR
+JAR Ejecutables
+¿Qué es un JAR?
+Ejercicio Javadoc
+Haga lo que hicimos en clase: javadoc
+Haga lo que hicimos en clase: JAR
+Para saber más: Maven
+Lo que aprendimos
+El paquete java.lang
+0 / 12
+28min
+Proyecto del aula anterior
+Conociendo java.lang
+Explorando String
+Acerca de java.lang
+Excepciones de java.lang
+Metodos String
+La clase String
+¿Cuál es el resultado?
+La interfaz CharSequence
+La clase StringBuilder
+Haga lo que hicimos en clase: String
+Lo que aprendimos
+La clase Object
+0 / 10
+26min
+Proyecto del aula anterior
+Explorando System
+Método toString()
+Propósito de toString()
+Haga lo que hicimos en clase: toString()
+Clase Object
+Acerca de Object
+Entendiendo el código
+Una duda mas
+Conclusión
+
+
+
+----------------------------------------------------------------
+
+Curso de
+Java y java.util: Colecciones, Wrappers y Lambda expressions
+
+
+Realice este curso para Java y:
+Aprenda los fundamentos de las colecciones Java
+Explora el poder y la flexibilidad de las listas
+Conoce como trabajar con ArrayList, LinkdedList o Vector
+Entiende como funcionan las lambda expressions
+Manipula y ordena las colecciones
+Aulas
+Conociendo Arrays Ver el primer video
+0 / 11
+29min
+Presentación
+Conociendo Arrays
+Acerca de arrays
+La sintaxis del array
+Operaciones
+¿Cuántas referencias?
+Objetos
+Acceso al array
+Haga lo que hicimos en clase: Trabajando con arrays
+Forma literal
+¿Qué aprendimos?
+Guardando Referencias
+0 / 13
+15min
+Proyecto del aula anterior
+Cast Objeto #1
+Cast Objeto #2
+Array de clientes
+Cast explícito e implícito
+Cast implícito y explícito de referencias
+Cast posible e imposible
+¿Qué declaración?
+Cuales casts
+Acerca de ClassCastException
+Metodo Main
+Haga lo que hicimos en clase: Arrays
+¿Qué aprendimos?
+ArrayList y Generics
+0 / 16
+33min
+Proyecto del aula anterior
+Operaciones Array
+Guarda Cuentas
+Haga lo que hicimos en clase: GuardadorDeCuentas
+Guarda Referencias
+Añadir referencia
+Arraylist
+Desventajas del array
+Acerca de Arraylist
+Acerca de ArrayList #2
+Haga lo que hicimos en clase: ArrayList
+Código heredado
+Beneficios Generics (genéricos)
+Haga lo que hicimos en clase: Generics
+Otras formas de inicialización
+¿Qué aprendimos?
+Equals y más listas
+0 / 11
+24min
+Proyecto del aula anterior
+Comparando Elementos
+Sobreescribiendo Equals
+Firma del método
+Acerca de equals
+Listas Anexadas
+Acerca de las listas
+LinkedList vs ArrayList
+Haga lo que hicimos en clase: Equals
+De Array para List
+¿Qué aprendimos?
+Vector e Interfaz Collection
+0 / 8
+15min
+Proyecto del aula anterior
+Vectores
+Vector, mi Vector!
+Superclase Collection
+¿Dominas listas?
+Acerca de las colecciones
+Haga lo que hicimos en clase: vector y colección
+¿Qué aprendimos?
+Las clases Wrappers
+0 / 11
+35min
+Proyecto del aula anterior
+Integer
+Autoboxing
+El Wrapper Integer
+Código confuso
+Parsing
+Wrappers
+¿Qué primitivo?
+¿Conoces los wrappers?
+Haga lo que hicimos en clase: Wrappers
+¿Qué aprendimos?
+Ordenando Listas
+0 / 13
+36min
+Proyecto del aula anterior
+Ordenando Listas
+Usando Wrappers
+Orden Natural
+Interfaces para ordenar
+Orden natural
+¿Por qué no funciona?
+Desafío de Collections
+Ordenar Arrays
+Haga lo que hicimos en clase: Ordenación de listas
+Haga lo que hicimos en clase: Ordenar por String
+Haga lo que hicimos en clase: Orden Natural
+¿Qué aprendimos?
+Clases anónimas y Lambdas
+0 / 12
+33min
+Proyecto del aula anterior
+Clases anonimas
+¿Cual objeto?
+¿Qué sucede?
+Lambdas
+¿Y si fuera lambda?
+Foreach con lambda
+El patron Iterator
+Haga lo que hicimos en clase: Clases anónimas
+Haga lo que hicimos en clase: Lambdas
+Proyecto Final
+Conclusion
+
+
+
+--------------------------------------------------------------------------
+Curso de
+Java y java.io: Streams, Reader y Writers
+
+
+
+Realice este curso para Java y:
+Aprenda los conceptos básicos sobre java.io
+Establezca entradas y salidas para diferentes corrientes
+Conozca la diferencia entre secuencias binarias y secuencias de caracteres
+Utilice la serialización de Java y la clase como Scanner, PrintStream o Propertie
+Comprender los juegos de caracteres y los problemas de codificación de caracteres
+Aulas
+Lectura con Java.io Ver el primer video
+0 / 10
+24min
+Presentación
+Preparando el ambiente
+Trabajando readers
+Leyendo archivos
+Leyendo multiples lineas
+Abrir archivos
+Lectura de líneas
+Lectura de archivos
+Haga lo que hicimos en clase: Lectura de archivos
+¿Qué aprendimos?
+Escritura con Java.io
+0 / 10
+27min
+Proyecto del aula anterior
+Escribiendo archivos
+Copiando archivos
+Archivos via socket
+Explorando readers writers
+Escritura de forma binaria
+Flexibilidad en I/O
+Escribiendo en la consola
+Haga lo que hicimos en clase: Escribir en un archivo
+¿Qué aprendimos?
+FileWriter y PrintStream
+0 / 9
+18min
+Proyecto del aula anterior
+Explorando file writer #1
+Explorando file writer #2
+Acerca de FileWriter
+Salida a archivo de texto
+Escritura independiente del sistema
+Para saber más: currentTimeMillis
+Haga lo que hicimos en clase: lectura y escritura más sencillas
+¿Qué aprendimos?
+Utilizando java.util.Scanner
+0 / 10
+22min
+Proyecto del aula anterior
+Leyendo archivos csv
+Dividiendo strings
+Formateando strings
+Leer archivos con Scanner
+Separando el contenido
+Formateo expresiva
+Para saber más: java.util.Properties
+Haga lo que hicimos en clase: Scanner
+¿Qué aprendimos?
+Encoding y Charsets
+0 / 10
+27min
+Proyecto del aula anterior
+Entendiendo encoding
+Usando charsets
+Cambiando codificacion archivos
+¿Cierto o errado?
+Encoding en Java
+UTF-8 en el archivo
+Para saber más: FAQ de UNICODE
+Haga lo que hicimos en clase: Encoding y Charsets
+¿Qué aprendimos?
+Serializando objetos
+0 / 12
+31min
+Proyecto del aula anterior
+Que es serializacion
+Serializando objetos
+Casos frecuentes
+Flujo binario
+Acerca de serialVersionUID
+Serializando composiciones
+Acerca de la serialización
+Haga lo que hicimos en clase: Serialización y deserialización de objetos
+Proyecto final
+¿Qué aprendimos?
+Conclusiones
+
+
+
+-----------------------------------------------------------------------------
+Curso de
+Java: Dominando las Collections
+
+Realice este curso para Java y:
+Vaya más allá de las principales clases y métodos de las Collections
+Apliques buenas prácticas de OO en los relacionamentos
+No tengas más miedo de los antiguos Iterators
+Set o List, ¿cual utilizar?
+Equals o hashCode de una vez
+Aulas
+Trabajando con ArrayList Ver el primer video
+0 / 10
+23min
+Presentación
+Preparando el ambiente
+Conociendo de ArrayList
+Cómo adicionar elementos a un ArrayList
+Formas de leer una ArrayList
+Recorrer una lista de String
+Métodos adicionales
+Ordenar una lista de String
+Haga lo que hicimos en aula
+Lo que aprendimos
+Listas de Objetos
+0 / 7
+17min
+Proyecto del aula anterior
+Creando listas con Objetos
+Adicionar un Objeto a una lista
+Métodos adicionales
+Ordenando listas
+Haga lo que hicimos en aula
+Lo que aprendimos
+Relacionando Listas de Objetos
+0 / 9
+30min
+Proyecto del aula anterior
+Conociendo la interface List
+Tipos de List
+Referencias y encapsulamento entre listas
+Creando listas
+Diferencias entre ArrayList y LinkedList
+Diferencias entre un ArrayList y LinkedList
+Haga lo que hicimos en aula
+Lo que aprendimos
+Conociendo más de Listas
+0 / 7
+21min
+Proyecto del aula anterior
+Métodos tradicionales usando Collections y Streams
+Métodos de la clase Collections
+Otros métodos usando Collections y Streams
+Métodos de la interfaz Stream
+Haga lo que hicimos en aula
+Lo que aprendimos
+Usando la interface Set
+0 / 9
+20min
+Proyecto del aula anterior
+Conociendo la interface Set
+Implementaciones de la interfaz Set
+Uso de la inferface Set
+Ventaja de usar un Set
+Ejemplos adicionales usando la interface Set
+Métodos de la interfaz Set
+Haga lo que hicimos en aula
+Lo que aprendimos
+Métodos equals y hashCode
+0 / 7
+22min
+Proyecto del aula anterior
+Porque usar equals o hashCode
+Métodos equals y hashCode
+Ejemplos adicionales usando equals o hashCode
+Métodos de la interfaz Set
+Haga lo que hicimos en aula
+Lo que aprendimos
+Otros tipos de Sets y Iterators
+0 / 7
+11min
+Proyecto del aula anterior
+Otros tipos de Sets y Iterators
+Conociendo de Iterator
+Cual collection usar
+Conociendo de Iterator
+Haga lo que hicimos en aula
+Lo que aprendimos
+Maps
+0 / 9
+18min
+Proyecto del aula anterior
+Definición de mapas
+Conociendo de Mapas
+Ejemplos de mapas
+Conociendo de Mapas
+Haga lo que hicimos en aula
+Proyecto Final
+Lo que aprendimos
+Conclusión
+
+
+
+----------------------------------------------------------------
+
+Curso de
+Java 8: Aproveche los nuevos recursos del lenguaje
+
+Realice este curso para Java y:
+Comprenda qué cambia con Java 8
+Aprenda a explorar una collection con forEach
+Reduzca la cantidad de líneas de su código usando Lambda
+Realice filtros y asignaciones en collections usando Stream
+Trabaje con la nueva API de fechas
+Da tus primeros pasos en la programación funcional
+Aulas
+Default Methods Ver el primer video
+0 / 8
+13min
+Presentación
+Preparando el ambiente
+Uso de Comparator
+Implementación del comparator
+Uso de forEach
+Parámetro del método forEach
+Haga lo que hicimos en aula
+Lo que aprendimos
+¡Que vengan los lambdas!
+0 / 7
+13min
+Proyecto del aula anterior
+Uso de lambdas
+Expresión Lambda en Java
+Que es una interfaz funcional
+Métodos de una interfaz funcional
+Haga lo que hicimos en aula
+Lo que aprendimos
+Código más reducido usando el método reference
+0 / 7
+13min
+Proyecto del aula anterior
+Método reference
+De lambda para method reference
+Ejemplos usando método reference
+Verificar el uso de reference
+Haga lo que hicimos en aula
+Lo que aprendimos
+Streams: Trabajando mejor con colecciones
+0 / 7
+18min
+Proyecto del aula anterior
+Streams
+Métodos de Stream
+Ejemplos usando Streams
+Ejemplos usando streams
+Haga lo que hicimos en aula
+Lo que aprendimos
+Más de Streams, Collectors y APIs
+0 / 11
+25min
+Proyecto del aula anterior
+Uso de Collectors
+Retornar cualquier elemento de un Stream
+Más de Streams
+Retornar cualquier elemento de un Stream
+Las APIs
+Fecha y hora con time-zone
+Haga lo que hicimos en aula
+Proyecto Final
+Lo que aprendimos
+Conclusión
+
+
+-----------------------------------------------------------------
+
+Curso de
+Java y JDBC: Trabajando con una Base de Datos
+
+Realice este curso para Java y:
+Aprende a comunicarte con una base de datos relacional
+Conoceremos un poco mas de Statement y ResultSet
+Encapsular el acceso en un DAO
+Connection pool, dataSources y otros recursos importantes
+Aulas
+Introducción a JDBC Ver el primer video
+0 / 9
+40min
+Presentación
+Entorno y versiones
+Preparando el ambiente
+Como conectar una aplicación a una base de datos
+API e Interfaces
+Los primeros pasos con JDBC
+Excepción cuando se recupera la conexión
+Haga lo que hicimos en aula
+Lo que aprendimos
+Ejecutando comandos SQL en Java
+0 / 14
+59min
+Proyecto del aula anterior
+Conociendo la view de la aplicación
+Download del proyecto con las views
+Listado con Statement #1
+Listado con Statement #2
+Connection, Statement y ResulSet
+Creando la ConnectionFactory
+El estándar Factory
+INSERT con Statement
+DELETE con Statement
+Retorno del método execute()
+Desafío: Modificando un registro con Statement
+Haga lo que hicimos en aula
+Lo que aprendimos
+Realizando mejoras en el proyecto
+0 / 13
+44min
+Proyecto del aula anterior
+Evitando SQL Injection utilizando PreparedStatement
+Sobre el PreparedStatement
+Desafío: Utilizando PreparedStatement en las demás operaciones
+Migrando para el PreparedStatement
+Tomando el control de la transacción
+JDBC y transacciones
+Manejando el commit y el rollback
+Auto-Commit
+Utilizando el try-with-resources
+try-with-resources y el método close()
+Haga lo que hicimos en aula
+Lo que aprendimos
+Escalabilidad con pool de conexiones
+0 / 9
+24min
+Proyecto del aula anterior
+¿Qué es un pool y un datasource?
+Aplicación con cliente único
+Creando un pool de conexiones
+Aplicación con múltiples clientes
+Probando el pool de conexiones
+Pool con conexiones ocupadas
+Haga lo que hicimos en aula
+Lo que aprendimos
+Capa de persistencia con DAO
+0 / 10
+46min
+Proyecto del aula anterior
+Creando el modelo producto
+DAO con INSERT del producto
+Ventajas del estándar DAO
+Operación de listado en el ProductoDAO
+DAOs y los constructores
+Desafío: Operaciones de modificación y exclusión en el ProductoDAO
+El estándar MVC
+Haga lo que hicimos en aula
+Lo que aprendimos
+Evitando queries N + 1
+0 / 14
+69min
+Proyecto del aula anterior
+Relación entre tablas
+Ventajas de la clave foránea
+El modelo, el controller y el DAO de categorías
+Relacionando el producto con la categoría en el registro
+Queries N + 1
+¿Por qué evitar queries N + 1?
+Utilizando INNER JOIN #1
+Utilizando INNER JOIN #2
+Informaciones relacionadas
+Haga lo que hicimos en aula
+Proyecto final
+Lo que aprendimos
+Conclusión
+
+
+

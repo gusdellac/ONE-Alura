@@ -1,0 +1,40 @@
+//Durante la compilación ocurre una verificación sintáctica del código fuente.
+//En la compilación y ejecución pueden aparecer errores.
+//La JVM ejecuta Bytecode.
+//El compilador genera Bytecode en caso el código fuente no presente ningún error sintáctico.
+
+
+
+
+¡Es hora de escribir tu código! Para hacer esto, sigue los pasos a continuación:
+
+1) Como se ve en el video, el comando utilizado para imprimir algo en la pantalla es System.out.println, pero no será suficiente para que el programa lo compile. Hasta ahora tenemos:
+
+System.out.println("Hola mundo");COPIA EL CÓDIGO
+2) Para compilar nuestro código, primero envuélvelo con una clase, así:
+
+public class Programa {
+    System.out.println("Hola mundo");
+}COPIA EL CÓDIGO
+3) Nuestro programa aún no compila, para que funcione, coloca el método main, no te preocupes por el método Main ahora, durante el curso veremos los detalles y entenderemos este método. Tendremos un código como este:
+
+public class Programa {
+
+    public static void main(String[] args){
+        System.out.println("Hola mundo");
+    }
+
+}COPIA EL CÓDIGO
+4) Después de hacer esto, guarda el archivo como Programa.java en algún directorio. ¡El nombre debe ser exactamente el mismo que el nombre de la clase creada, incluyendo letras mayúsculas y minúsculas! Recuerda que Java es case-sensitive, distingue entre mayúsculas y minúsculas.
+
+5) Ahora, compila el código usando el compilador Java de Oracle, llamado javac. Esto nos dará el bytecode:
+
+javac Programa.javaCOPIA EL CÓDIGO
+6) Después de compilar, podemos ver que el bytecode se generó con el mismo nombre, pero con .class al final.
+
+7) Ejecuta el programa ya compilado escribiendo:
+
+java ProgramaCOPIA EL CÓDIGO
+Cuando escribimos solo Java, estamos invocando la máquina virtual para interpretar nuestro programa.
+
+Después de eso, tendremos la frase Hola mundo.
