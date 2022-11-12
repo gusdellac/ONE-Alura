@@ -1,0 +1,12 @@
+Ingresar a mysql con línea de comandos (CMD)
+
+1- Ejecutamos símbolo de sistema.
+2- Buscamos la carpeta raíz de nuestro sistema (cd\)
+3- Ingresamos a dir Program Files (cd Program Files)
+4- cd MySQL
+5- cd MySQL Server 8.0
+6- cd bin
+7- dir mysql.exe (vemos información del archivo que ejecuta mysql)
+8- mysql -h localhost -u root -p (ejecutamos esta línea)
+9- con la línea anterior se ejecuta mysql.exe y se nos solicita ingresar el password
+10- ingresamos pass + enter

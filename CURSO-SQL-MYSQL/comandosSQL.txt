@@ -1,0 +1,11 @@
+CREATE DATABASE | SCHEMA db_name --> crea una base de datos
+
+DROP DATABASE | SCHEMA db_name --> elimina una base de datos
+
+USE db_name --> selecciona una base de datos para poder utilizarla
+
+SELECT * FROM tabla_name --> selecciona una tabla de la base de datos seleccionada en el paso previo
+
+CREATE TABLE table_name (campo1, campo2 ,campo3, etc ...)  --> crea una tabla con sus campos
+
+DROP TABLE table_name --> elimina una tabla
