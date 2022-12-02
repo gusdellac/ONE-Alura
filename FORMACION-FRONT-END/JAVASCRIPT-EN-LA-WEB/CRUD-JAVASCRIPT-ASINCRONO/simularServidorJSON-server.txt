@@ -14,7 +14,8 @@ Create a db.json file with some data   :
   "profile": { "name": "typicode" }
 }
 
-json-server --watch db.json  :    iniciar JSON server
+json-server --watch db.json  :    iniciar JSON server 
+ctrl + c para detener la ejecución del servidor
 
 
 
